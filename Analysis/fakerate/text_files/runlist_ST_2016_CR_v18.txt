@@ -1,0 +1,5 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.ST_s-channel_4f_leptonDecays.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.ST_t-channel_antitop_4f_inclusiveDecays.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.ST_t-channel_top_4f_inclusiveDecays.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.ST_tW_antitop_5f_NoFullyHadronicDecays.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.ST_tW_top_5f_NoFullyHadronicDecays.root

@@ -1,0 +1,5 @@
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate/CR_Run2017B_MET_31Mar2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate/CR_Run2017C_MET_31Mar2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate/CR_Run2017D_MET_31Mar2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate/CR_Run2017E_MET_31Mar2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate/CR_Run2017F_MET_31Mar2018.root

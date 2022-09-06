@@ -1,0 +1,4 @@
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Run2018A_MET_17Sep2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Run2018B_MET_17Sep2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Run2018C_MET_17Sep2018.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Run2018D_MET_22Jan2019.root

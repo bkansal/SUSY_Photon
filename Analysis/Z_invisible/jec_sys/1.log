@@ -1,0 +1,1259 @@
+TreeUtilities : FillChain 
+No. of Entries in this tree : 2180
+Initiating analysis of dataset muon_data_2016
+Treating the input files as BG for setting tree branches
+dataset muon_data_2016 
+nentries 2180
+Analyzing dataset muon_data_2016 
+Compiling code for elec = 0 & muon = 1
+Saving hists for PDF & Scale syst? 1
+Applying MET filters ? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 0
+Weight ib pb-1 : 0
+globalSuperTightHalo2016Filter : 2180
+HBHENoiseFilter : 2180
+HBHEIsoNoiseFilter : 2178
+EcalDeadCellTriggerPrimitiveFilter : 2180
+ecalBadCalibReducedFilter : 2180
+BadPFMuonFilter : 2180
+PrimaryVertexFilter : 2180
+NVtx>0 : 2180
+JetID : 1660
+JetAk8ID : 1884
+Total Events with NElectrons=2 : 0
+Total Events with NMuons=2 : 565
+Total Events with NElectrons=1 & NMuons=1 : 104
+Total Events with Nleptons=2 : 565
+Events in Z mass window : 296
+Events survived after MET<200 selec. : 98
+Total Events with vetoing NElectrons=2 || NMuons=2 in SR : 0
+Events survived after ST>200 & nJet>=2 selec : 14
+remaining : 14
+Events in SP : 14
+Events in EW : 0
+HLT_Ele20_WPLoose_Gsf_v : 673=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 2593
+Initiating analysis of dataset muon_data_2017
+Treating the input files as BG for setting tree branches
+dataset muon_data_2017 
+nentries 2593
+Analyzing dataset muon_data_2017 
+Compiling code for elec = 0 & muon = 1
+Saving hists for PDF & Scale syst? 1
+Applying MET filters ? 1
+Processing as Z(G)->LL(G) Decay
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 0
+Weight ib pb-1 : 0
+globalSuperTightHalo2016Filter : 2593
+HBHENoiseFilter : 2593
+HBHEIsoNoiseFilter : 2593
+EcalDeadCellTriggerPrimitiveFilter : 2592
+ecalBadCalibReducedFilter : 2593
+BadPFMuonFilter : 2592
+PrimaryVertexFilter : 2593
+NVtx>0 : 2593
+JetID : 458
+JetAk8ID : 2031
+Total Events with NElectrons=2 : 0
+Total Events with NMuons=2 : 658
+Total Events with NElectrons=1 & NMuons=1 : 116
+Total Events with Nleptons=2 : 658
+Events in Z mass window : 353
+Events survived after MET<200 selec. : 125
+Total Events with vetoing NElectrons=2 || NMuons=2 in SR : 0
+Events survived after ST>200 & nJet>=2 selec : 30
+remaining : 30
+Events in SP : 30
+Events in EW : 0
+HLT_Ele20_WPLoose_Gsf_v : 776=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 3756
+Initiating analysis of dataset muon_data_2018
+Treating the input files as BG for setting tree branches
+dataset muon_data_2018 
+nentries 3756
+Analyzing dataset muon_data_2018 
+Compiling code for elec = 0 & muon = 1
+Saving hists for PDF & Scale syst? 1
+Applying MET filters ? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 0
+Weight ib pb-1 : 0
+globalSuperTightHalo2016Filter : 3446
+HBHENoiseFilter : 3446
+HBHEIsoNoiseFilter : 3446
+EcalDeadCellTriggerPrimitiveFilter : 3445
+ecalBadCalibReducedFilter : 3445
+BadPFMuonFilter : 3445
+PrimaryVertexFilter : 3446
+NVtx>0 : 3446
+JetID : 535
+JetAk8ID : 2648
+Total Events with NElectrons=2 : 0
+Total Events with NMuons=2 : 955
+Total Events with NElectrons=1 & NMuons=1 : 166
+Total Events with Nleptons=2 : 955
+Events in Z mass window : 502
+Events survived after MET<200 selec. : 185
+Total Events with vetoing NElectrons=2 || NMuons=2 in SR : 0
+Events survived after ST>200 & nJet>=2 selec : 42
+remaining : 42
+Events in SP : 39
+Events in EW : 3
+HLT_Ele20_WPLoose_Gsf_v : 1131=================
+hadd Target file: Run2_Muondata_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Run2016_Muondata_CR_v18.root
+hadd Source file 2: Run2017_Muondata_CR_v18.root
+hadd Source file 3: Run2018_Muondata_CR_v18.root
+hadd Target path: Run2_Muondata_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 1704
+Initiating analysis of dataset elec_data_2016
+Treating the input files as BG for setting tree branches
+dataset elec_data_2016 
+nentries 1704
+Analyzing dataset elec_data_2016 
+Compiling code for elec = 1 & muon = 0
+Saving hists for PDF & Scale syst? 1
+Applying MET filters ? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 0
+Weight ib pb-1 : 0
+globalSuperTightHalo2016Filter : 1704
+HBHENoiseFilter : 1704
+HBHEIsoNoiseFilter : 1703
+EcalDeadCellTriggerPrimitiveFilter : 1704
+ecalBadCalibReducedFilter : 1704
+BadPFMuonFilter : 1704
+PrimaryVertexFilter : 1704
+NVtx>0 : 1704
+JetID : 1288
+JetAk8ID : 1471
+Total Events with NElectrons=2 : 385
+Total Events with NMuons=2 : 0
+Total Events with NElectrons=1 & NMuons=1 : 0
+Total Events with Nleptons=2 : 385
+Events in Z mass window : 241
+Events survived after MET<200 selec. : 83
+Total Events with vetoing NElectrons=2 || NMuons=2 in SR : 0
+Events survived after ST>200 & nJet>=2 selec : 19
+remaining : 19
+Events in SP : 19
+Events in EW : 0
+HLT_Ele20_WPLoose_Gsf_v : 489=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 1746
+Initiating analysis of dataset elec_data_2017
+Treating the input files as BG for setting tree branches
+dataset elec_data_2017 
+nentries 1746
+Analyzing dataset elec_data_2017 
+Compiling code for elec = 1 & muon = 0
+Saving hists for PDF & Scale syst? 1
+Applying MET filters ? 1
+Processing as Z(G)->LL(G) Decay
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 0
+Weight ib pb-1 : 0
+globalSuperTightHalo2016Filter : 1746
+HBHENoiseFilter : 1746
+HBHEIsoNoiseFilter : 1745
+EcalDeadCellTriggerPrimitiveFilter : 1746
+ecalBadCalibReducedFilter : 1746
+BadPFMuonFilter : 1746
+PrimaryVertexFilter : 1746
+NVtx>0 : 1746
+JetID : 289
+JetAk8ID : 1350
+Total Events with NElectrons=2 : 444
+Total Events with NMuons=2 : 0
+Total Events with NElectrons=1 & NMuons=1 : 0
+Total Events with Nleptons=2 : 444
+Events in Z mass window : 297
+Events survived after MET<200 selec. : 102
+Total Events with vetoing NElectrons=2 || NMuons=2 in SR : 0
+Events survived after ST>200 & nJet>=2 selec : 23
+remaining : 23
+Events in SP : 21
+Events in EW : 2
+HLT_Ele20_WPLoose_Gsf_v : 543=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 5318
+Initiating analysis of dataset elec_data_2018
+Treating the input files as BG for setting tree branches
+dataset elec_data_2018 
+nentries 5318
+Analyzing dataset elec_data_2018 
+Compiling code for elec = 1 & muon = 0
+Saving hists for PDF & Scale syst? 1
+Applying MET filters ? 1
+Processing as Z(G)->LL(G) Decay
+Processing as Z(G)->LL(G) Decay
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 0
+Weight ib pb-1 : 0
+globalSuperTightHalo2016Filter : 4896
+HBHENoiseFilter : 4896
+HBHEIsoNoiseFilter : 4896
+EcalDeadCellTriggerPrimitiveFilter : 4895
+ecalBadCalibReducedFilter : 4896
+BadPFMuonFilter : 4895
+PrimaryVertexFilter : 4896
+NVtx>0 : 4896
+JetID : 600
+JetAk8ID : 3664
+Total Events with NElectrons=2 : 604
+Total Events with NMuons=2 : 0
+Total Events with NElectrons=1 & NMuons=1 : 0
+Total Events with Nleptons=2 : 604
+Events in Z mass window : 375
+Events survived after MET<200 selec. : 120
+Total Events with vetoing NElectrons=2 || NMuons=2 in SR : 0
+Events survived after ST>200 & nJet>=2 selec : 28
+remaining : 28
+Events in SP : 28
+Events in EW : 0
+HLT_Ele20_WPLoose_Gsf_v : 734=================
+hadd Target file: Run2_elecdata_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Run2016_elecdata_CR_v18.root
+hadd Source file 2: Run2017_elecdata_CR_v18.root
+hadd Source file 3: Run2018_elecdata_CR_v18.root
+hadd Target path: Run2_elecdata_CR_v18.root:/
+hadd Target file: TTGJets_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job0.root
+hadd Source file 2: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job1.root
+hadd Source file 3: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job2.root
+hadd Source file 4: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job3.root
+hadd Source file 5: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job4.root
+hadd Target path: TTGJets_2016_CR_v18.root:/
+hadd Target file: WGJets_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.WGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job0.root
+hadd Source file 3: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job1.root
+hadd Source file 4: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job2.root
+hadd Source file 5: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job3.root
+hadd Target path: WGJets_2016_CR_v18.root:/
+hadd Target file: ZGToLLG_nlo_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.ZGTo2LG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_v18_job0.root
+hadd Source file 2: Summer16v3.ZGTo2LG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_v18_job1.root
+hadd Target path: ZGToLLG_nlo_2016_CR_v18.root:/
+hadd Target file: DYJetsToLL_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 2: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 3: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 4: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 5: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 6: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 7: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 8: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 9: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job8.root
+hadd Source file 10: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job9.root
+hadd Source file 11: Summer16v3.DYJetsToLL_M-50_HT-1200to2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 12: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 13: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 14: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 15: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 16: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 17: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 18: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 19: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 20: Summer16v3.DYJetsToLL_M-50_HT-2500toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 21: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 22: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 23: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 24: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 25: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 26: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 27: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 28: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 29: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job8.root
+hadd Source file 30: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 31: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job10.root
+hadd Source file 32: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 33: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 34: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 35: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 36: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 37: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 38: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 39: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job8.root
+hadd Source file 40: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job9.root
+hadd Source file 41: Summer16v3.DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 42: Summer16v3.DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 43: Summer16v3.DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Target path: DYJetsToLL_2016_CR_v18.root:/
+hadd Target file: ZJZGToLL_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2016_CR_v18.root
+hadd Source file 2: DYJetsToLL_2016_CR_v18.root
+hadd Target path: ZJZGToLL_2016_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2016_CR_v18.root
+hadd Source file 2: TTGJets_2016_CR_v18.root
+hadd Source file 3: WGJets_2016_CR_v18.root
+hadd Target path: TTWZJZGToLL_2016_CR_v18.root:/
+hadd Target file: TTGJets_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job0.root
+hadd Source file 2: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job1.root
+hadd Source file 3: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job2.root
+hadd Source file 4: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job3.root
+hadd Source file 5: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job4.root
+hadd Source file 6: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job5.root
+hadd Source file 7: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job6.root
+hadd Source file 8: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job7.root
+hadd Source file 9: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job8.root
+hadd Source file 10: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job9.root
+hadd Target path: TTGJets_2017_CR_v18.root:/
+hadd Target file: WGJets_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 4: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 5: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 6: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 7: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 8: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 9: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 10: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 11: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Source file 12: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 13: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job10.root
+hadd Source file 14: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 15: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 16: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 17: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 18: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 19: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 20: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 21: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 22: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Target path: WGJets_2017_CR_v18.root:/
+hadd Target file: ZGToLLG_nlo_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job0.root
+hadd Source file 2: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job10.root
+hadd Source file 3: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job11.root
+hadd Source file 4: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job1.root
+hadd Source file 5: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job2.root
+hadd Source file 6: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job3.root
+hadd Source file 7: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job4.root
+hadd Source file 8: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job5.root
+hadd Source file 9: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job6.root
+hadd Source file 10: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job7.root
+hadd Source file 11: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job8.root
+hadd Source file 12: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job9.root
+hadd Target path: ZGToLLG_nlo_2017_CR_v18.root:/
+hadd Target file: DYJetsToLL_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job11.root
+hadd Source file 4: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job12.root
+hadd Source file 5: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job13.root
+hadd Source file 6: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job14.root
+hadd Source file 7: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job15.root
+hadd Source file 8: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job16.root
+hadd Source file 9: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job17.root
+hadd Source file 10: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job18.root
+hadd Source file 11: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job19.root
+hadd Source file 12: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job1.root
+hadd Source file 13: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job20.root
+hadd Source file 14: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job21.root
+hadd Source file 15: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job2.root
+hadd Source file 16: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job3.root
+hadd Source file 17: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job4.root
+hadd Source file 18: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job5.root
+hadd Source file 19: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job6.root
+hadd Source file 20: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job7.root
+hadd Source file 21: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job8.root
+hadd Source file 22: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job9.root
+hadd Source file 23: Fall17.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job0.root
+hadd Source file 24: Fall17.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job1.root
+hadd Source file 25: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job0.root
+hadd Source file 26: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job10.root
+hadd Source file 27: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job11.root
+hadd Source file 28: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job12.root
+hadd Source file 29: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job13.root
+hadd Source file 30: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job14.root
+hadd Source file 31: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job15.root
+hadd Source file 32: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job16.root
+hadd Source file 33: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job17.root
+hadd Source file 34: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job18.root
+hadd Source file 35: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job19.root
+hadd Source file 36: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job1.root
+hadd Source file 37: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job20.root
+hadd Source file 38: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job21.root
+hadd Source file 39: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job22.root
+hadd Source file 40: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job2.root
+hadd Source file 41: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job3.root
+hadd Source file 42: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job4.root
+hadd Source file 43: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job5.root
+hadd Source file 44: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job6.root
+hadd Source file 45: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job7.root
+hadd Source file 46: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job8.root
+hadd Source file 47: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job9.root
+hadd Source file 48: Fall17.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job0.root
+hadd Source file 49: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job0.root
+hadd Source file 50: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job10.root
+hadd Source file 51: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job11.root
+hadd Source file 52: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job12.root
+hadd Source file 53: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job13.root
+hadd Source file 54: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job14.root
+hadd Source file 55: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job15.root
+hadd Source file 56: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job16.root
+hadd Source file 57: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job1.root
+hadd Source file 58: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job2.root
+hadd Source file 59: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job3.root
+hadd Source file 60: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job4.root
+hadd Source file 61: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job5.root
+hadd Source file 62: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job6.root
+hadd Source file 63: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job7.root
+hadd Source file 64: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job8.root
+hadd Source file 65: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job9.root
+hadd Source file 66: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job0.root
+hadd Source file 67: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job10.root
+hadd Source file 68: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job11.root
+hadd Source file 69: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job12.root
+hadd Source file 70: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job13.root
+hadd Source file 71: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job14.root
+hadd Source file 72: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job15.root
+hadd Source file 73: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job1.root
+hadd Source file 74: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job2.root
+hadd Source file 75: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job3.root
+hadd Source file 76: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job4.root
+hadd Source file 77: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job5.root
+hadd Source file 78: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job6.root
+hadd Source file 79: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job7.root
+hadd Source file 80: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job8.root
+hadd Source file 81: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job9.root
+hadd Source file 82: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job0.root
+hadd Source file 83: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job1.root
+hadd Source file 84: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job2.root
+hadd Source file 85: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job3.root
+hadd Source file 86: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job4.root
+hadd Source file 87: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job5.root
+hadd Source file 88: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job6.root
+hadd Target path: DYJetsToLL_2017_CR_v18.root:/
+hadd Target file: ZJZGToLL_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2017_CR_v18.root
+hadd Source file 2: DYJetsToLL_2017_CR_v18.root
+hadd Target path: ZJZGToLL_2017_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2017_CR_v18.root
+hadd Source file 2: TTGJets_2017_CR_v18.root
+hadd Source file 3: WGJets_2017_CR_v18.root
+hadd Target path: TTWZJZGToLL_2017_CR_v18.root:/
+hadd Target file: TTGJets_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job0.root
+hadd Source file 2: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job10.root
+hadd Source file 3: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job11.root
+hadd Source file 4: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job12.root
+hadd Source file 5: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job13.root
+hadd Source file 6: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job14.root
+hadd Source file 7: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job15.root
+hadd Source file 8: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job16.root
+hadd Source file 9: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job17.root
+hadd Source file 10: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job18.root
+hadd Source file 11: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job19.root
+hadd Source file 12: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job1.root
+hadd Source file 13: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job20.root
+hadd Source file 14: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job21.root
+hadd Source file 15: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job22.root
+hadd Source file 16: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job23.root
+hadd Source file 17: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job24.root
+hadd Source file 18: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job25.root
+hadd Source file 19: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job26.root
+hadd Source file 20: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job2.root
+hadd Source file 21: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job3.root
+hadd Source file 22: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job4.root
+hadd Source file 23: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job5.root
+hadd Source file 24: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job6.root
+hadd Source file 25: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job7.root
+hadd Source file 26: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job8.root
+hadd Source file 27: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job9.root
+hadd Target path: TTGJets_2018_CR_v18.root:/
+hadd Target file: WGJets_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job11.root
+hadd Source file 4: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job12.root
+hadd Source file 5: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job13.root
+hadd Source file 6: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job14.root
+hadd Source file 7: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 8: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 9: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 10: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 11: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 12: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 13: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 14: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 15: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Source file 16: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 17: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 18: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 19: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 20: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 21: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 22: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 23: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 24: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 25: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Target path: WGJets_2018_CR_v18.root:/
+hadd Target file: ZGToLLG_nlo_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job0.root
+hadd Source file 2: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job10.root
+hadd Source file 3: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job11.root
+hadd Source file 4: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job12.root
+hadd Source file 5: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job13.root
+hadd Source file 6: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job14.root
+hadd Source file 7: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job15.root
+hadd Source file 8: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job16.root
+hadd Source file 9: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job17.root
+hadd Source file 10: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job18.root
+hadd Source file 11: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job1.root
+hadd Source file 12: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job2.root
+hadd Source file 13: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job3.root
+hadd Source file 14: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job4.root
+hadd Source file 15: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job5.root
+hadd Source file 16: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job6.root
+hadd Source file 17: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job7.root
+hadd Source file 18: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job8.root
+hadd Source file 19: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job9.root
+hadd Target path: ZGToLLG_nlo_2018_CR_v18.root:/
+hadd Target file: DYJetsToLL_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job11.root
+hadd Source file 4: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job12.root
+hadd Source file 5: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job13.root
+hadd Source file 6: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job14.root
+hadd Source file 7: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job15.root
+hadd Source file 8: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job16.root
+hadd Source file 9: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job17.root
+hadd Source file 10: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job18.root
+hadd Source file 11: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job19.root
+hadd Source file 12: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job1.root
+hadd Source file 13: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job20.root
+hadd Source file 14: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job21.root
+hadd Source file 15: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job22.root
+hadd Source file 16: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job23.root
+hadd Source file 17: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job2.root
+hadd Source file 18: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job3.root
+hadd Source file 19: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job4.root
+hadd Source file 20: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job5.root
+hadd Source file 21: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job6.root
+hadd Source file 22: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job7.root
+hadd Source file 23: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job8.root
+hadd Source file 24: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job9.root
+hadd Source file 25: Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job0.root
+hadd Source file 26: Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job1.root
+hadd Source file 27: Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job2.root
+hadd Source file 28: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job0.root
+hadd Source file 29: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job10.root
+hadd Source file 30: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job11.root
+hadd Source file 31: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job12.root
+hadd Source file 32: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job13.root
+hadd Source file 33: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job14.root
+hadd Source file 34: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job15.root
+hadd Source file 35: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job16.root
+hadd Source file 36: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job17.root
+hadd Source file 37: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job18.root
+hadd Source file 38: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job19.root
+hadd Source file 39: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job1.root
+hadd Source file 40: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job20.root
+hadd Source file 41: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job21.root
+hadd Source file 42: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job22.root
+hadd Source file 43: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job23.root
+hadd Source file 44: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job24.root
+hadd Source file 45: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job25.root
+hadd Source file 46: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job26.root
+hadd Source file 47: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job27.root
+hadd Source file 48: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job28.root
+hadd Source file 49: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job29.root
+hadd Source file 50: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job2.root
+hadd Source file 51: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job30.root
+hadd Source file 52: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job31.root
+hadd Source file 53: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job3.root
+hadd Source file 54: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job4.root
+hadd Source file 55: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job5.root
+hadd Source file 56: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job6.root
+hadd Source file 57: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job7.root
+hadd Source file 58: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job8.root
+hadd Source file 59: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job9.root
+hadd Source file 60: Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job0.root
+hadd Source file 61: Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job1.root
+hadd Source file 62: Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job2.root
+hadd Source file 63: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job0.root
+hadd Source file 64: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job10.root
+hadd Source file 65: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job11.root
+hadd Source file 66: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job12.root
+hadd Source file 67: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job13.root
+hadd Source file 68: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job14.root
+hadd Source file 69: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job15.root
+hadd Source file 70: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job16.root
+hadd Source file 71: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job17.root
+hadd Source file 72: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job18.root
+hadd Source file 73: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job19.root
+hadd Source file 74: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job1.root
+hadd Source file 75: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job20.root
+hadd Source file 76: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job21.root
+hadd Source file 77: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job22.root
+hadd Source file 78: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job23.root
+hadd Source file 79: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job24.root
+hadd Source file 80: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job25.root
+hadd Source file 81: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job26.root
+hadd Source file 82: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job27.root
+hadd Source file 83: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job28.root
+hadd Source file 84: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job2.root
+hadd Source file 85: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job3.root
+hadd Source file 86: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job4.root
+hadd Source file 87: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job5.root
+hadd Source file 88: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job6.root
+hadd Source file 89: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job7.root
+hadd Source file 90: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job8.root
+hadd Source file 91: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job9.root
+hadd Source file 92: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job0.root
+hadd Source file 93: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job10.root
+hadd Source file 94: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job11.root
+hadd Source file 95: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job12.root
+hadd Source file 96: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job13.root
+hadd Source file 97: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job14.root
+hadd Source file 98: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job15.root
+hadd Source file 99: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job16.root
+hadd Source file 100: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job17.root
+hadd Source file 101: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job18.root
+hadd Source file 102: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job19.root
+hadd Source file 103: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job1.root
+hadd Source file 104: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job20.root
+hadd Source file 105: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job21.root
+hadd Source file 106: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job22.root
+hadd Source file 107: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job23.root
+hadd Source file 108: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job24.root
+hadd Source file 109: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job25.root
+hadd Source file 110: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job26.root
+hadd Source file 111: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job2.root
+hadd Source file 112: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job3.root
+hadd Source file 113: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job4.root
+hadd Source file 114: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job5.root
+hadd Source file 115: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job6.root
+hadd Source file 116: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job7.root
+hadd Source file 117: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job8.root
+hadd Source file 118: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job9.root
+hadd Source file 119: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job0.root
+hadd Source file 120: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job10.root
+hadd Source file 121: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job1.root
+hadd Source file 122: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job2.root
+hadd Source file 123: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job3.root
+hadd Source file 124: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job4.root
+hadd Source file 125: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job5.root
+hadd Source file 126: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job6.root
+hadd Source file 127: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job7.root
+hadd Source file 128: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job8.root
+hadd Source file 129: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job9.root
+hadd Target path: DYJetsToLL_2018_CR_v18.root:/
+hadd Target file: ZJZGToLL_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2018_CR_v18.root
+hadd Source file 2: DYJetsToLL_2018_CR_v18.root
+hadd Target path: ZJZGToLL_2018_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2018_CR_v18.root
+hadd Source file 2: TTGJets_2018_CR_v18.root
+hadd Source file 3: WGJets_2018_CR_v18.root
+hadd Target path: TTWZJZGToLL_2018_CR_v18.root:/
+hadd Target file: TTG_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTGJets_2016_CR_v18.root
+hadd Source file 2: TTGJets_2017_CR_v18.root
+hadd Source file 3: TTGJets_2018_CR_v18.root
+hadd Target path: TTG_CR_v18.root:/
+hadd Target file: WG_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: WGJets_2016_CR_v18.root
+hadd Source file 2: WGJets_2017_CR_v18.root
+hadd Source file 3: WGJets_2018_CR_v18.root
+hadd Target path: WG_CR_v18.root:/
+hadd Target file: DYJetsToLL_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: DYJetsToLL_2016_CR_v18.root
+hadd Source file 2: DYJetsToLL_2017_CR_v18.root
+hadd Source file 3: DYJetsToLL_2018_CR_v18.root
+hadd Target path: DYJetsToLL_CR_v18.root:/
+hadd Target file: ZGToLLG_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2016_CR_v18.root
+hadd Source file 2: ZGToLLG_nlo_2017_CR_v18.root
+hadd Source file 3: ZGToLLG_nlo_2018_CR_v18.root
+hadd Target path: ZGToLLG_CR_v18.root:/
+hadd Target file: ZJZGToLL_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2016_CR_v18.root
+hadd Source file 2: ZJZGToLL_2017_CR_v18.root
+hadd Source file 3: ZJZGToLL_2018_CR_v18.root
+hadd Target path: ZJZGToLL_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTWZJZGToLL_2016_CR_v18.root
+hadd Source file 2: TTWZJZGToLL_2017_CR_v18.root
+hadd Source file 3: TTWZJZGToLL_2018_CR_v18.root
+hadd Target path: TTWZJZGToLL_CR_v18.root:/
+hadd Target file: TTGJets_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job0.root
+hadd Source file 2: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job1.root
+hadd Source file 3: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job2.root
+hadd Source file 4: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job3.root
+hadd Source file 5: Summer16v3.TTGJets_TuneCUETP8M1_13TeV-amcatnloFXFX-madspin-pythia8_v18_job4.root
+hadd Target path: TTGJets_2016_CR_v18.root:/
+hadd Target file: WGJets_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.WGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job0.root
+hadd Source file 3: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job1.root
+hadd Source file 4: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job2.root
+hadd Source file 5: Summer16v3.WGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph_v18_job3.root
+hadd Target path: WGJets_2016_CR_v18.root:/
+hadd Target file: ZGToLLG_nlo_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.ZGTo2LG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_v18_job0.root
+hadd Source file 2: Summer16v3.ZGTo2LG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_v18_job1.root
+hadd Target path: ZGToLLG_nlo_2016_CR_v18.root:/
+hadd Target file: DYJetsToLL_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 2: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 3: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 4: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 5: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 6: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 7: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 8: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 9: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job8.root
+hadd Source file 10: Summer16v3.DYJetsToLL_M-50_HT-100to200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job9.root
+hadd Source file 11: Summer16v3.DYJetsToLL_M-50_HT-1200to2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 12: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 13: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 14: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 15: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 16: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 17: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 18: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 19: Summer16v3.DYJetsToLL_M-50_HT-200to400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 20: Summer16v3.DYJetsToLL_M-50_HT-2500toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 21: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 22: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 23: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 24: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 25: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 26: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 27: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 28: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 29: Summer16v3.DYJetsToLL_M-50_HT-400to600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job8.root
+hadd Source file 30: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 31: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job10.root
+hadd Source file 32: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 33: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Source file 34: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job3.root
+hadd Source file 35: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job4.root
+hadd Source file 36: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job5.root
+hadd Source file 37: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job6.root
+hadd Source file 38: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job7.root
+hadd Source file 39: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job8.root
+hadd Source file 40: Summer16v3.DYJetsToLL_M-50_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job9.root
+hadd Source file 41: Summer16v3.DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job0.root
+hadd Source file 42: Summer16v3.DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job1.root
+hadd Source file 43: Summer16v3.DYJetsToLL_M-50_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18_job2.root
+hadd Target path: DYJetsToLL_2016_CR_v18.root:/
+hadd Target file: ZJZGToLL_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2016_CR_v18.root
+hadd Source file 2: DYJetsToLL_2016_CR_v18.root
+hadd Target path: ZJZGToLL_2016_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2016_CR_v18.root
+hadd Source file 2: TTGJets_2016_CR_v18.root
+hadd Source file 3: WGJets_2016_CR_v18.root
+hadd Target path: TTWZJZGToLL_2016_CR_v18.root:/
+hadd Target file: TTGJets_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job0.root
+hadd Source file 2: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job1.root
+hadd Source file 3: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job2.root
+hadd Source file 4: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job3.root
+hadd Source file 5: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job4.root
+hadd Source file 6: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job5.root
+hadd Source file 7: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job6.root
+hadd Source file 8: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job7.root
+hadd Source file 9: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job8.root
+hadd Source file 10: Fall17.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job9.root
+hadd Target path: TTGJets_2017_CR_v18.root:/
+hadd Target file: WGJets_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 4: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 5: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 6: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 7: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 8: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 9: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 10: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 11: Fall17.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Source file 12: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 13: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job10.root
+hadd Source file 14: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 15: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 16: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 17: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 18: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 19: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 20: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 21: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 22: Fall17.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Target path: WGJets_2017_CR_v18.root:/
+hadd Target file: ZGToLLG_nlo_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job0.root
+hadd Source file 2: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job10.root
+hadd Source file 3: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job11.root
+hadd Source file 4: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job1.root
+hadd Source file 5: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job2.root
+hadd Source file 6: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job3.root
+hadd Source file 7: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job4.root
+hadd Source file 8: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job5.root
+hadd Source file 9: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job6.root
+hadd Source file 10: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job7.root
+hadd Source file 11: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job8.root
+hadd Source file 12: Fall17.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job9.root
+hadd Target path: ZGToLLG_nlo_2017_CR_v18.root:/
+hadd Target file: DYJetsToLL_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job11.root
+hadd Source file 4: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job12.root
+hadd Source file 5: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job13.root
+hadd Source file 6: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job14.root
+hadd Source file 7: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job15.root
+hadd Source file 8: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job16.root
+hadd Source file 9: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job17.root
+hadd Source file 10: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job18.root
+hadd Source file 11: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job19.root
+hadd Source file 12: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job1.root
+hadd Source file 13: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job20.root
+hadd Source file 14: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job21.root
+hadd Source file 15: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job2.root
+hadd Source file 16: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job3.root
+hadd Source file 17: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job4.root
+hadd Source file 18: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job5.root
+hadd Source file 19: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job6.root
+hadd Source file 20: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job7.root
+hadd Source file 21: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job8.root
+hadd Source file 22: Fall17.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job9.root
+hadd Source file 23: Fall17.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job0.root
+hadd Source file 24: Fall17.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job1.root
+hadd Source file 25: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job0.root
+hadd Source file 26: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job10.root
+hadd Source file 27: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job11.root
+hadd Source file 28: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job12.root
+hadd Source file 29: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job13.root
+hadd Source file 30: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job14.root
+hadd Source file 31: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job15.root
+hadd Source file 32: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job16.root
+hadd Source file 33: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job17.root
+hadd Source file 34: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job18.root
+hadd Source file 35: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job19.root
+hadd Source file 36: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job1.root
+hadd Source file 37: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job20.root
+hadd Source file 38: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job21.root
+hadd Source file 39: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job22.root
+hadd Source file 40: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job2.root
+hadd Source file 41: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job3.root
+hadd Source file 42: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job4.root
+hadd Source file 43: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job5.root
+hadd Source file 44: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job6.root
+hadd Source file 45: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job7.root
+hadd Source file 46: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job8.root
+hadd Source file 47: Fall17.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job9.root
+hadd Source file 48: Fall17.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job0.root
+hadd Source file 49: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job0.root
+hadd Source file 50: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job10.root
+hadd Source file 51: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job11.root
+hadd Source file 52: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job12.root
+hadd Source file 53: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job13.root
+hadd Source file 54: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job14.root
+hadd Source file 55: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job15.root
+hadd Source file 56: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job16.root
+hadd Source file 57: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job1.root
+hadd Source file 58: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job2.root
+hadd Source file 59: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job3.root
+hadd Source file 60: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job4.root
+hadd Source file 61: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job5.root
+hadd Source file 62: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job6.root
+hadd Source file 63: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job7.root
+hadd Source file 64: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job8.root
+hadd Source file 65: Fall17.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job9.root
+hadd Source file 66: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job0.root
+hadd Source file 67: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job10.root
+hadd Source file 68: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job11.root
+hadd Source file 69: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job12.root
+hadd Source file 70: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job13.root
+hadd Source file 71: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job14.root
+hadd Source file 72: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job15.root
+hadd Source file 73: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job1.root
+hadd Source file 74: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job2.root
+hadd Source file 75: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job3.root
+hadd Source file 76: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job4.root
+hadd Source file 77: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job5.root
+hadd Source file 78: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job6.root
+hadd Source file 79: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job7.root
+hadd Source file 80: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job8.root
+hadd Source file 81: Fall17.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job9.root
+hadd Source file 82: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job0.root
+hadd Source file 83: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job1.root
+hadd Source file 84: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job2.root
+hadd Source file 85: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job3.root
+hadd Source file 86: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job4.root
+hadd Source file 87: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job5.root
+hadd Source file 88: Fall17.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job6.root
+hadd Target path: DYJetsToLL_2017_CR_v18.root:/
+hadd Target file: ZJZGToLL_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2017_CR_v18.root
+hadd Source file 2: DYJetsToLL_2017_CR_v18.root
+hadd Target path: ZJZGToLL_2017_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2017_CR_v18.root
+hadd Source file 2: TTGJets_2017_CR_v18.root
+hadd Source file 3: WGJets_2017_CR_v18.root
+hadd Target path: TTWZJZGToLL_2017_CR_v18.root:/
+hadd Target file: TTGJets_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job0.root
+hadd Source file 2: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job10.root
+hadd Source file 3: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job11.root
+hadd Source file 4: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job12.root
+hadd Source file 5: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job13.root
+hadd Source file 6: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job14.root
+hadd Source file 7: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job15.root
+hadd Source file 8: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job16.root
+hadd Source file 9: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job17.root
+hadd Source file 10: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job18.root
+hadd Source file 11: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job19.root
+hadd Source file 12: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job1.root
+hadd Source file 13: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job20.root
+hadd Source file 14: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job21.root
+hadd Source file 15: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job22.root
+hadd Source file 16: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job23.root
+hadd Source file 17: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job24.root
+hadd Source file 18: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job25.root
+hadd Source file 19: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job26.root
+hadd Source file 20: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job2.root
+hadd Source file 21: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job3.root
+hadd Source file 22: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job4.root
+hadd Source file 23: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job5.root
+hadd Source file 24: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job6.root
+hadd Source file 25: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job7.root
+hadd Source file 26: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job8.root
+hadd Source file 27: Autumn18.TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_v18_job9.root
+hadd Target path: TTGJets_2018_CR_v18.root:/
+hadd Target file: WGJets_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job11.root
+hadd Source file 4: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job12.root
+hadd Source file 5: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job13.root
+hadd Source file 6: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job14.root
+hadd Source file 7: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 8: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 9: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 10: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 11: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 12: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 13: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 14: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 15: Autumn18.WGJets_MonoPhoton_PtG-130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Source file 16: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job0.root
+hadd Source file 17: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job1.root
+hadd Source file 18: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job2.root
+hadd Source file 19: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job3.root
+hadd Source file 20: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job4.root
+hadd Source file 21: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job5.root
+hadd Source file 22: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job6.root
+hadd Source file 23: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job7.root
+hadd Source file 24: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job8.root
+hadd Source file 25: Autumn18.WGJets_MonoPhoton_PtG-40to130_TuneCP5_13TeV-madgraph_v18_job9.root
+hadd Target path: WGJets_2018_CR_v18.root:/
+hadd Target file: ZGToLLG_nlo_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job0.root
+hadd Source file 2: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job10.root
+hadd Source file 3: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job11.root
+hadd Source file 4: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job12.root
+hadd Source file 5: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job13.root
+hadd Source file 6: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job14.root
+hadd Source file 7: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job15.root
+hadd Source file 8: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job16.root
+hadd Source file 9: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job17.root
+hadd Source file 10: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job18.root
+hadd Source file 11: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job1.root
+hadd Source file 12: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job2.root
+hadd Source file 13: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job3.root
+hadd Source file 14: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job4.root
+hadd Source file 15: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job5.root
+hadd Source file 16: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job6.root
+hadd Source file 17: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job7.root
+hadd Source file 18: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job8.root
+hadd Source file 19: Autumn18.ZGTo2LG_PtG-130_TuneCP5_13TeV-amcatnloFXFX-pythia8_v18_job9.root
+hadd Target path: ZGToLLG_nlo_2018_CR_v18.root:/
+hadd Target file: DYJetsToLL_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job0.root
+hadd Source file 2: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job10.root
+hadd Source file 3: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job11.root
+hadd Source file 4: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job12.root
+hadd Source file 5: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job13.root
+hadd Source file 6: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job14.root
+hadd Source file 7: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job15.root
+hadd Source file 8: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job16.root
+hadd Source file 9: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job17.root
+hadd Source file 10: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job18.root
+hadd Source file 11: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job19.root
+hadd Source file 12: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job1.root
+hadd Source file 13: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job20.root
+hadd Source file 14: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job21.root
+hadd Source file 15: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job22.root
+hadd Source file 16: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job23.root
+hadd Source file 17: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job2.root
+hadd Source file 18: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job3.root
+hadd Source file 19: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job4.root
+hadd Source file 20: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job5.root
+hadd Source file 21: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job6.root
+hadd Source file 22: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job7.root
+hadd Source file 23: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job8.root
+hadd Source file 24: Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18_job9.root
+hadd Source file 25: Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job0.root
+hadd Source file 26: Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job1.root
+hadd Source file 27: Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18_job2.root
+hadd Source file 28: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job0.root
+hadd Source file 29: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job10.root
+hadd Source file 30: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job11.root
+hadd Source file 31: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job12.root
+hadd Source file 32: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job13.root
+hadd Source file 33: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job14.root
+hadd Source file 34: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job15.root
+hadd Source file 35: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job16.root
+hadd Source file 36: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job17.root
+hadd Source file 37: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job18.root
+hadd Source file 38: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job19.root
+hadd Source file 39: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job1.root
+hadd Source file 40: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job20.root
+hadd Source file 41: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job21.root
+hadd Source file 42: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job22.root
+hadd Source file 43: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job23.root
+hadd Source file 44: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job24.root
+hadd Source file 45: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job25.root
+hadd Source file 46: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job26.root
+hadd Source file 47: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job27.root
+hadd Source file 48: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job28.root
+hadd Source file 49: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job29.root
+hadd Source file 50: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job2.root
+hadd Source file 51: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job30.root
+hadd Source file 52: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job31.root
+hadd Source file 53: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job3.root
+hadd Source file 54: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job4.root
+hadd Source file 55: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job5.root
+hadd Source file 56: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job6.root
+hadd Source file 57: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job7.root
+hadd Source file 58: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job8.root
+hadd Source file 59: Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18_job9.root
+hadd Source file 60: Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job0.root
+hadd Source file 61: Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job1.root
+hadd Source file 62: Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18_job2.root
+hadd Source file 63: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job0.root
+hadd Source file 64: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job10.root
+hadd Source file 65: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job11.root
+hadd Source file 66: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job12.root
+hadd Source file 67: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job13.root
+hadd Source file 68: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job14.root
+hadd Source file 69: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job15.root
+hadd Source file 70: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job16.root
+hadd Source file 71: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job17.root
+hadd Source file 72: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job18.root
+hadd Source file 73: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job19.root
+hadd Source file 74: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job1.root
+hadd Source file 75: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job20.root
+hadd Source file 76: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job21.root
+hadd Source file 77: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job22.root
+hadd Source file 78: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job23.root
+hadd Source file 79: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job24.root
+hadd Source file 80: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job25.root
+hadd Source file 81: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job26.root
+hadd Source file 82: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job27.root
+hadd Source file 83: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job28.root
+hadd Source file 84: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job2.root
+hadd Source file 85: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job3.root
+hadd Source file 86: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job4.root
+hadd Source file 87: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job5.root
+hadd Source file 88: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job6.root
+hadd Source file 89: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job7.root
+hadd Source file 90: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job8.root
+hadd Source file 91: Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18_job9.root
+hadd Source file 92: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job0.root
+hadd Source file 93: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job10.root
+hadd Source file 94: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job11.root
+hadd Source file 95: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job12.root
+hadd Source file 96: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job13.root
+hadd Source file 97: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job14.root
+hadd Source file 98: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job15.root
+hadd Source file 99: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job16.root
+hadd Source file 100: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job17.root
+hadd Source file 101: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job18.root
+hadd Source file 102: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job19.root
+hadd Source file 103: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job1.root
+hadd Source file 104: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job20.root
+hadd Source file 105: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job21.root
+hadd Source file 106: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job22.root
+hadd Source file 107: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job23.root
+hadd Source file 108: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job24.root
+hadd Source file 109: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job25.root
+hadd Source file 110: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job26.root
+hadd Source file 111: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job2.root
+hadd Source file 112: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job3.root
+hadd Source file 113: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job4.root
+hadd Source file 114: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job5.root
+hadd Source file 115: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job6.root
+hadd Source file 116: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job7.root
+hadd Source file 117: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job8.root
+hadd Source file 118: Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18_job9.root
+hadd Source file 119: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job0.root
+hadd Source file 120: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job10.root
+hadd Source file 121: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job1.root
+hadd Source file 122: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job2.root
+hadd Source file 123: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job3.root
+hadd Source file 124: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job4.root
+hadd Source file 125: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job5.root
+hadd Source file 126: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job6.root
+hadd Source file 127: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job7.root
+hadd Source file 128: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job8.root
+hadd Source file 129: Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18_job9.root
+hadd Target path: DYJetsToLL_2018_CR_v18.root:/
+hadd Target file: ZJZGToLL_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2018_CR_v18.root
+hadd Source file 2: DYJetsToLL_2018_CR_v18.root
+hadd Target path: ZJZGToLL_2018_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2018_CR_v18.root
+hadd Source file 2: TTGJets_2018_CR_v18.root
+hadd Source file 3: WGJets_2018_CR_v18.root
+hadd Target path: TTWZJZGToLL_2018_CR_v18.root:/
+hadd Target file: TTG_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTGJets_2016_CR_v18.root
+hadd Source file 2: TTGJets_2017_CR_v18.root
+hadd Source file 3: TTGJets_2018_CR_v18.root
+hadd Target path: TTG_CR_v18.root:/
+hadd Target file: WG_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: WGJets_2016_CR_v18.root
+hadd Source file 2: WGJets_2017_CR_v18.root
+hadd Source file 3: WGJets_2018_CR_v18.root
+hadd Target path: WG_CR_v18.root:/
+hadd Target file: DYJetsToLL_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: DYJetsToLL_2016_CR_v18.root
+hadd Source file 2: DYJetsToLL_2017_CR_v18.root
+hadd Source file 3: DYJetsToLL_2018_CR_v18.root
+hadd Target path: DYJetsToLL_CR_v18.root:/
+hadd Target file: ZGToLLG_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZGToLLG_nlo_2016_CR_v18.root
+hadd Source file 2: ZGToLLG_nlo_2017_CR_v18.root
+hadd Source file 3: ZGToLLG_nlo_2018_CR_v18.root
+hadd Target path: ZGToLLG_CR_v18.root:/
+hadd Target file: ZJZGToLL_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: ZJZGToLL_2016_CR_v18.root
+hadd Source file 2: ZJZGToLL_2017_CR_v18.root
+hadd Source file 3: ZJZGToLL_2018_CR_v18.root
+hadd Target path: ZJZGToLL_CR_v18.root:/
+hadd Target file: TTWZJZGToLL_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTWZJZGToLL_2016_CR_v18.root
+hadd Source file 2: TTWZJZGToLL_2017_CR_v18.root
+hadd Source file 3: TTWZJZGToLL_2018_CR_v18.root
+hadd Target path: TTWZJZGToLL_CR_v18.root:/
+ZGToLL_CR_v18.root:/

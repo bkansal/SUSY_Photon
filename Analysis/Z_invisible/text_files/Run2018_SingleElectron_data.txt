@@ -1,0 +1,4 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/Z_invisible/tmp/CR_Run2018A-17Sep2018-v1.EGamma.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/Z_invisible/tmp/CR_Run2018B-17Sep2018-v1.EGamma.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/Z_invisible/tmp/CR_Run2018C-17Sep2018-v1.EGamma.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/Z_invisible/tmp/CR_Run2018D-22Jan2019-v2.EGamma.root

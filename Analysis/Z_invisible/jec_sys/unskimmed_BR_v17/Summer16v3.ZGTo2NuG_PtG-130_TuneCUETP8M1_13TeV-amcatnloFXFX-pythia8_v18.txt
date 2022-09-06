@@ -1,0 +1,10 @@
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_0_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_1_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_2_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_3_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_4_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_5_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_6_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_7_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_8_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZGTo2NuG_PtG-130_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_9_RA2AnalysisTree.root

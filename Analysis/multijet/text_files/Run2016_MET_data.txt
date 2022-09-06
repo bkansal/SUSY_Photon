@@ -1,0 +1,7 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016B_MET_17Jul2018.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016C_MET_17Jul2018.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016D_MET_17Jul2018.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016E_MET_17Jul2018.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016F_MET_17Jul2018.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016G_MET_17Jul2018.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/final/CR_Run2016H_MET_17Jul2018.root

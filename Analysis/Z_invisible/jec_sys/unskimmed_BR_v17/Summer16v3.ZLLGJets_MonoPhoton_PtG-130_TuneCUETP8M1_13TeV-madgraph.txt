@@ -1,0 +1,4 @@
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZLLGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph_0_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZLLGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph_1_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZLLGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph_2_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad//SusyPhotonMET/Run2ProductionV18/background/ZGjets/Summer16v3.ZLLGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph_3_RA2AnalysisTree.root

@@ -1,0 +1,4 @@
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.TTJets_HT-1200to2500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.TTJets_HT-2500toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.TTJets_HT-600to800_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/fake_rate_v2/CR_Summer16v3.TTJets_HT-800to1200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root

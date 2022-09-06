@@ -1,0 +1,5 @@
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Fall17.ST_s-channel_4f_leptonDecays.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Fall17.ST_t-channel_antitop_4f_inclusiveDecays.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Fall17.ST_t-channel_top_4f_inclusiveDecays.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Fall17.ST_tW_antitop_5f_NoFullyHadronicDecays.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/multijet/K_valid/Fall17.ST_tW_top_5f_NoFullyHadronicDecays.root

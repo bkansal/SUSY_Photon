@@ -1,0 +1,2 @@
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/Z_invisible/CR_Autumn18.ZNuNuGJets_MonoPhoton_PtG-130_13TeV-madgraph_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/for_bkg_estimation/Z_invisible/CR_Autumn18.ZNuNuGJets_MonoPhoton_PtG-40to130_13TeV-madgraph_v18.root

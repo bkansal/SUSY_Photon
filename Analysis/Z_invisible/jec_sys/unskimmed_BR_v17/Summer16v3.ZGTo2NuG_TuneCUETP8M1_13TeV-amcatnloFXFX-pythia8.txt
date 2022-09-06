@@ -1,0 +1,17 @@
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_0_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_10_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_11_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_12_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_13_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_14_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_15_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_16_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_1_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_2_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_3_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_4_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_5_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_6_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_7_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_8_RA2AnalysisTree.root
+root://cmseos.fnal.gov//store/user/lpcsusyhad/EWhad_WW_WZ_WH/Run2ProductionV18/Summer16v3.ZGTo2NuG_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_9_RA2AnalysisTree.root

@@ -1,0 +1,6 @@
+Run2016_CR_v18.txt Run2016_CR_v18.root data_v18_2016
+Run2017_CR_v18.txt Run2017_CR_v18.root data_v18_2017
+Run2018_CR_v18.txt Run2018_CR_v18.root data_v18_2018
+runlist_DYJets_2016_CR_v18.txt DYJets_2016_CR_v18.root DYJets_v17_2016
+runlist_DYJets_2017_CR_v18.txt DYJets_2017_CR_v18.root DYJets_v17_2017
+runlist_DYJets_2018_CR_v18.txt DYJets_2018_CR_v18.root DYJets_v17_2018

@@ -1,0 +1,823 @@
+TreeUtilities : FillChain 
+No. of Entries in this tree : 14526
+Initiating analysis of dataset TTG_v17_2016
+Treating the input files as BG for setting tree branches
+dataset TTG_v17_2016 
+nentries 14526
+Analyzing dataset TTG_v17_2016 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing TTG_v17_2016 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 3.697
+Weight ib pb-1 : 7.74331e-07
+globalSuperTightHalo2016Filter : 13789
+HBHENoiseFilter : 13789
+HBHEIsoNoiseFilter : 13789
+EcalDeadCellTriggerPrimitiveFilter : 13789
+ecalBadCalibReducedFilter : 13789
+BadPFMuonFilter : 13789
+PrimaryVertexFilter : 13789
+NVtx>0 : 13789
+Events Survived before genphomatch : 13789
+Events Survived after genphomatch : 12547
+Events passing reco electron pass id & iso : 5129
+pass realphoton --> 7099
+fail realphoton --> 32
+CR Events passing mt cut : 3756
+Events Survived after PreSelection : 3216
+Events having Jet matched to photon : 3216
+ Events with 0 e & 1 photon : 22
+ Events with 1 e & 0 photon : 3194
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 11386
+Initiating analysis of dataset WG_v17_2016
+Treating the input files as BG for setting tree branches
+dataset WG_v17_2016 
+nentries 11386
+Analyzing dataset WG_v17_2016 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 12.68
+Weight ib pb-1 : 2.4972e-06
+globalSuperTightHalo2016Filter : 10850
+HBHENoiseFilter : 10850
+HBHEIsoNoiseFilter : 10850
+EcalDeadCellTriggerPrimitiveFilter : 10850
+ecalBadCalibReducedFilter : 10850
+BadPFMuonFilter : 10850
+PrimaryVertexFilter : 10850
+NVtx>0 : 10850
+Events Survived before genphomatch : 10850
+Events Survived after genphomatch : 10675
+Events passing reco electron pass id & iso : 1738
+pass realphoton --> 8888
+fail realphoton --> 3
+CR Events passing mt cut : 1228
+Events Survived after PreSelection : 1079
+Events having Jet matched to photon : 1079
+ Events with 0 e & 1 photon : 3
+ Events with 1 e & 0 photon : 1076
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTWGJets_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTGJets_2016_CR_v18.root
+hadd Source file 2: WGJets_2016_CR_v18.root
+hadd Target path: TTWGJets_2016_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 116381
+Initiating analysis of dataset TTJets2_v17_2016
+Treating the input files as BG for setting tree branches
+dataset TTJets2_v17_2016 
+nentries 116381
+Analyzing dataset TTJets2_v17_2016 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing TTJets2_v17_2016 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 182.164
+Weight ib pb-1 : 3.01877e-06
+globalSuperTightHalo2016Filter : 104692
+HBHENoiseFilter : 104692
+HBHEIsoNoiseFilter : 104692
+EcalDeadCellTriggerPrimitiveFilter : 104692
+ecalBadCalibReducedFilter : 104692
+BadPFMuonFilter : 104692
+PrimaryVertexFilter : 104692
+NVtx>0 : 104692
+Events Survived before genphomatch : 104692
+Events Survived after genphomatch : 100023
+Events passing reco electron pass id & iso : 98149
+pass realphoton --> 895
+fail realphoton --> 914
+CR Events passing mt cut : 75179
+Events Survived after PreSelection : 69106
+Events having Jet matched to photon : 69106
+ Events with 0 e & 1 photon : 685
+ Events with 1 e & 0 photon : 68421
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 346173
+Initiating analysis of dataset TTJets_v17_2016
+Treating the input files as BG for setting tree branches
+dataset TTJets_v17_2016 
+nentries 346173
+Analyzing dataset TTJets_v17_2016 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing TTJets_v17_2016 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 1.09595
+Weight ib pb-1 : 1.04081e-07
+globalSuperTightHalo2016Filter : 328802
+HBHENoiseFilter : 328802
+HBHEIsoNoiseFilter : 328802
+EcalDeadCellTriggerPrimitiveFilter : 328802
+ecalBadCalibReducedFilter : 328802
+BadPFMuonFilter : 328802
+PrimaryVertexFilter : 328802
+NVtx>0 : 328802
+Events Survived before genphomatch : 328802
+Events Survived after genphomatch : 316998
+Events passing reco electron pass id & iso : 312147
+pass realphoton --> 2682
+fail realphoton --> 1902
+CR Events passing mt cut : 240558
+Events Survived after PreSelection : 186416
+Events having Jet matched to photon : 186416
+ Events with 0 e & 1 photon : 1258
+ Events with 1 e & 0 photon : 185158
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 582947
+Initiating analysis of dataset WJets_v17_2016
+Treating the input files as BG for setting tree branches
+dataset WJets_v17_2016 
+nentries 582947
+Analyzing dataset WJets_v17_2016 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing WJets_v17_2016 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 6.72833
+Weight ib pb-1 : 8.59242e-07
+globalSuperTightHalo2016Filter : 537192
+HBHENoiseFilter : 537192
+HBHEIsoNoiseFilter : 537192
+EcalDeadCellTriggerPrimitiveFilter : 537192
+ecalBadCalibReducedFilter : 537192
+BadPFMuonFilter : 537192
+PrimaryVertexFilter : 537192
+NVtx>0 : 537192
+Events Survived before genphomatch : 537192
+Events Survived after genphomatch : 523465
+Events passing reco electron pass id & iso : 513748
+pass realphoton --> 5219
+fail realphoton --> 4477
+CR Events passing mt cut : 445410
+Events Survived after PreSelection : 382412
+Events having Jet matched to photon : 382412
+ Events with 0 e & 1 photon : 3773
+ Events with 1 e & 0 photon : 378639
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTJets_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTJetsHT_2016_CR_v18.root
+hadd Source file 2: TTJetsinc_2016_CR_v18.root
+hadd Target path: TTJets_2016_CR_v18.root:/
+hadd Target file: TTWGJ_2016_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTJets_2016_CR_v18.root
+hadd Source file 2: TTWGJets_2016_CR_v18.root
+hadd Source file 3: WJets_2016_CR_v18.root
+hadd Target path: TTWGJ_2016_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 12906
+Initiating analysis of dataset TTG_v17_2017
+Treating the input files as BG for setting tree branches
+dataset TTG_v17_2017 
+nentries 12906
+Analyzing dataset TTG_v17_2017 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing TTG_v17_2017 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 3.697
+Weight ib pb-1 : -6.79391e-07
+globalSuperTightHalo2016Filter : 12279
+HBHENoiseFilter : 12279
+HBHEIsoNoiseFilter : 12279
+EcalDeadCellTriggerPrimitiveFilter : 12279
+ecalBadCalibReducedFilter : 12279
+BadPFMuonFilter : 12279
+PrimaryVertexFilter : 12279
+NVtx>0 : 12279
+Events Survived before genphomatch : 12279
+Events Survived after genphomatch : 11074
+Events passing reco electron pass id & iso : 4270
+pass realphoton --> 6263
+fail realphoton --> 23
+CR Events passing mt cut : 2977
+Events Survived after PreSelection : 2373
+Events having Jet matched to photon : 2373
+ Events with 0 e & 1 photon : 17
+ Events with 1 e & 0 photon : 2356
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 83633
+Initiating analysis of dataset WG_v17_2017
+Treating the input files as BG for setting tree branches
+dataset WG_v17_2017 
+nentries 83633
+Analyzing dataset WG_v17_2017 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 12.93
+Weight ib pb-1 : 2.63886e-06
+globalSuperTightHalo2016Filter : 80914
+HBHENoiseFilter : 80914
+HBHEIsoNoiseFilter : 80914
+EcalDeadCellTriggerPrimitiveFilter : 80914
+ecalBadCalibReducedFilter : 80914
+BadPFMuonFilter : 80914
+PrimaryVertexFilter : 80914
+NVtx>0 : 80914
+Events Survived before genphomatch : 80914
+Events Survived after genphomatch : 80207
+Events passing reco electron pass id & iso : 7053
+pass realphoton --> 70861
+fail realphoton --> 8
+CR Events passing mt cut : 3887
+Events Survived after PreSelection : 2639
+Events having Jet matched to photon : 2639
+ Events with 0 e & 1 photon : 3
+ Events with 1 e & 0 photon : 2636
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTWGJets_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTGJets_2017_CR_v18.root
+hadd Source file 2: WGJets_2017_CR_v18.root
+hadd Target path: TTWGJets_2017_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 127633
+Initiating analysis of dataset TTJets2_v17_2017
+Treating the input files as BG for setting tree branches
+dataset TTJets2_v17_2017 
+nentries 127633
+Analyzing dataset TTJets2_v17_2017 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing TTJets2_v17_2017 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 182.164
+Weight ib pb-1 : 3.21597e-06
+globalSuperTightHalo2016Filter : 117355
+HBHENoiseFilter : 117355
+HBHEIsoNoiseFilter : 117355
+EcalDeadCellTriggerPrimitiveFilter : 117355
+ecalBadCalibReducedFilter : 117355
+BadPFMuonFilter : 117355
+PrimaryVertexFilter : 117355
+NVtx>0 : 117355
+Events Survived before genphomatch : 117355
+Events Survived after genphomatch : 112545
+Events passing reco electron pass id & iso : 109940
+pass realphoton --> 1362
+fail realphoton --> 717
+CR Events passing mt cut : 79951
+Events Survived after PreSelection : 72421
+Events having Jet matched to photon : 72421
+ Events with 0 e & 1 photon : 544
+ Events with 1 e & 0 photon : 71877
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 1813067
+Initiating analysis of dataset TTJets_v17_2017
+Treating the input files as BG for setting tree branches
+dataset TTJets_v17_2017 
+nentries 1813067
+Analyzing dataset TTJets_v17_2017 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 1.26462
+Weight ib pb-1 : 3.18573e-08
+globalSuperTightHalo2016Filter : 1739123
+HBHENoiseFilter : 1739123
+HBHEIsoNoiseFilter : 1739123
+EcalDeadCellTriggerPrimitiveFilter : 1739123
+ecalBadCalibReducedFilter : 1739123
+BadPFMuonFilter : 1739123
+PrimaryVertexFilter : 1739123
+NVtx>0 : 1739123
+Events Survived before genphomatch : 1739123
+Events Survived after genphomatch : 1682233
+Events passing reco electron pass id & iso : 1651963
+pass realphoton --> 15882
+fail realphoton --> 7988
+CR Events passing mt cut : 1214320
+Events Survived after PreSelection : 924215
+Events having Jet matched to photon : 924215
+ Events with 0 e & 1 photon : 5157
+ Events with 1 e & 0 photon : 919058
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 1881005
+Initiating analysis of dataset WJets_v17_2017
+Treating the input files as BG for setting tree branches
+dataset WJets_v17_2017 
+nentries 1881005
+Analyzing dataset WJets_v17_2017 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying L1 prefiring prob.? 1
+**********processing WJets_v17_2017 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 7.49482
+Weight ib pb-1 : 3.69695e-07
+globalSuperTightHalo2016Filter : 1762691
+HBHENoiseFilter : 1762691
+HBHEIsoNoiseFilter : 1762691
+EcalDeadCellTriggerPrimitiveFilter : 1762691
+ecalBadCalibReducedFilter : 1762691
+BadPFMuonFilter : 1762691
+PrimaryVertexFilter : 1762691
+NVtx>0 : 1762691
+Events Survived before genphomatch : 1762691
+Events Survived after genphomatch : 1714860
+Events passing reco electron pass id & iso : 1679755
+pass realphoton --> 21511
+fail realphoton --> 8641
+CR Events passing mt cut : 1313305
+Events Survived after PreSelection : 1056808
+Events having Jet matched to photon : 1056808
+ Events with 0 e & 1 photon : 6778
+ Events with 1 e & 0 photon : 1050030
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTJets_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTJetsHT_2017_CR_v18.root
+hadd Source file 2: TTJetsinc_2017_CR_v18.root
+hadd Target path: TTJets_2017_CR_v18.root:/
+hadd Target file: TTWGJ_2017_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTJets_2017_CR_v18.root
+hadd Source file 2: TTWGJets_2017_CR_v18.root
+hadd Source file 3: WJets_2017_CR_v18.root
+hadd Target path: TTWGJ_2017_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 12921
+Initiating analysis of dataset TTG_v17_2018
+Treating the input files as BG for setting tree branches
+dataset TTG_v17_2018 
+nentries 12921
+Analyzing dataset TTG_v17_2018 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying HEM veto? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 3.697
+Weight ib pb-1 : 2.00664e-06
+globalSuperTightHalo2016Filter : 11278
+HBHENoiseFilter : 11278
+HBHEIsoNoiseFilter : 11278
+EcalDeadCellTriggerPrimitiveFilter : 11278
+ecalBadCalibReducedFilter : 11278
+BadPFMuonFilter : 11278
+PrimaryVertexFilter : 11278
+NVtx>0 : 11278
+Events Survived before genphomatch : 11278
+Events Survived after genphomatch : 10140
+Events passing reco electron pass id & iso : 3910
+pass realphoton --> 5739
+fail realphoton --> 26
+CR Events passing mt cut : 2767
+Events Survived after PreSelection : 2229
+Events having Jet matched to photon : 2229
+ Events with 0 e & 1 photon : 18
+ Events with 1 e & 0 photon : 2211
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 84494
+Initiating analysis of dataset WG_v17_2018
+Treating the input files as BG for setting tree branches
+dataset WG_v17_2018 
+nentries 84494
+Analyzing dataset WG_v17_2018 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying HEM veto? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 12.95
+Weight ib pb-1 : 2.70261e-06
+globalSuperTightHalo2016Filter : 75833
+HBHENoiseFilter : 75833
+HBHEIsoNoiseFilter : 75833
+EcalDeadCellTriggerPrimitiveFilter : 75833
+ecalBadCalibReducedFilter : 75833
+BadPFMuonFilter : 75833
+PrimaryVertexFilter : 75833
+NVtx>0 : 75833
+Events Survived before genphomatch : 75833
+Events Survived after genphomatch : 74775
+Events passing reco electron pass id & iso : 6434
+pass realphoton --> 66200
+fail realphoton --> 12
+CR Events passing mt cut : 3514
+Events Survived after PreSelection : 2419
+Events having Jet matched to photon : 2419
+ Events with 0 e & 1 photon : 7
+ Events with 1 e & 0 photon : 2412
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTWGJets_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTGJets_2018_CR_v18.root
+hadd Source file 2: WGJets_2018_CR_v18.root
+hadd Target path: TTWGJets_2018_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 123648
+Initiating analysis of dataset TTJets2_v17_2018
+Treating the input files as BG for setting tree branches
+dataset TTJets2_v17_2018 
+nentries 123648
+Analyzing dataset TTJets2_v17_2018 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying HEM veto? 1
+**********processing TTJets2_v17_2018 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 182.164
+Weight ib pb-1 : 3.04256e-06
+globalSuperTightHalo2016Filter : 105423
+HBHENoiseFilter : 105423
+HBHEIsoNoiseFilter : 105423
+EcalDeadCellTriggerPrimitiveFilter : 105423
+ecalBadCalibReducedFilter : 105423
+BadPFMuonFilter : 105423
+PrimaryVertexFilter : 105423
+NVtx>0 : 105423
+Events Survived before genphomatch : 105423
+Events Survived after genphomatch : 101360
+Events passing reco electron pass id & iso : 98631
+pass realphoton --> 1291
+fail realphoton --> 899
+CR Events passing mt cut : 73104
+Events Survived after PreSelection : 66265
+Events having Jet matched to photon : 66265
+ Events with 0 e & 1 photon : 652
+ Events with 1 e & 0 photon : 65613
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 383964
+Initiating analysis of dataset TTJets_v17_2018
+Treating the input files as BG for setting tree branches
+dataset TTJets_v17_2018 
+nentries 383964
+Analyzing dataset TTJets_v17_2018 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying HEM veto? 1
+**********processing TTJets_v17_2018 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 1.26806
+Weight ib pb-1 : 1.23319e-07
+globalSuperTightHalo2016Filter : 331573
+HBHENoiseFilter : 331573
+HBHEIsoNoiseFilter : 331573
+EcalDeadCellTriggerPrimitiveFilter : 331573
+ecalBadCalibReducedFilter : 331573
+BadPFMuonFilter : 331573
+PrimaryVertexFilter : 331573
+NVtx>0 : 331573
+Events Survived before genphomatch : 331573
+Events Survived after genphomatch : 321196
+Events passing reco electron pass id & iso : 314508
+pass realphoton --> 3107
+fail realphoton --> 2051
+CR Events passing mt cut : 233118
+Events Survived after PreSelection : 175660
+Events having Jet matched to photon : 175660
+ Events with 0 e & 1 photon : 1256
+ Events with 1 e & 0 photon : 174404
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 695662
+Initiating analysis of dataset WJets_v17_2018
+Treating the input files as BG for setting tree branches
+dataset WJets_v17_2018 
+nentries 695662
+Analyzing dataset WJets_v17_2018 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+Applying HEM veto? 1
+**********processing WJets_v17_2018 with non-prompt Gen photon
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 7.62665
+Weight ib pb-1 : 9.12035e-07
+globalSuperTightHalo2016Filter : 612671
+HBHENoiseFilter : 612671
+HBHEIsoNoiseFilter : 612671
+EcalDeadCellTriggerPrimitiveFilter : 612671
+ecalBadCalibReducedFilter : 612671
+BadPFMuonFilter : 612671
+PrimaryVertexFilter : 612671
+NVtx>0 : 612671
+Events Survived before genphomatch : 612671
+Events Survived after genphomatch : 595571
+Events passing reco electron pass id & iso : 582122
+pass realphoton --> 7297
+fail realphoton --> 4321
+CR Events passing mt cut : 485490
+Events Survived after PreSelection : 413302
+Events having Jet matched to photon : 413302
+ Events with 0 e & 1 photon : 3626
+ Events with 1 e & 0 photon : 409676
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTJets_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTJetsHT_2018_CR_v18.root
+hadd Source file 2: TTJetsinc_2018_CR_v18.root
+hadd Target path: TTJets_2018_CR_v18.root:/
+hadd Target file: TTWGJ_2018_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTJets_2018_CR_v18.root
+hadd Source file 2: TTWGJets_2018_CR_v18.root
+hadd Source file 3: WJets_2018_CR_v18.root
+hadd Target path: TTWGJ_2018_CR_v18.root:/
+TreeUtilities : FillChain 
+No. of Entries in this tree : 38840
+Initiating analysis of dataset data_2016
+Treating the input files as BG for setting tree branches
+dataset data_2016 
+nentries 38840
+Analyzing dataset data_2016 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 4.45212e-319
+Weight ib pb-1 : 6.95272e-310
+globalSuperTightHalo2016Filter : 34472
+HBHENoiseFilter : 34472
+HBHEIsoNoiseFilter : 34472
+EcalDeadCellTriggerPrimitiveFilter : 34472
+ecalBadCalibReducedFilter : 34472
+BadPFMuonFilter : 34472
+PrimaryVertexFilter : 34472
+NVtx>0 : 34472
+Events Survived before genphomatch : 0
+Events Survived after genphomatch : 34472
+Events passing reco electron pass id & iso : 31674
+pass realphoton --> 0
+fail realphoton --> 0
+CR Events passing mt cut : 25435
+Events Survived after PreSelection : 24958
+Events having Jet matched to photon : 24958
+ Events with 0 e & 1 photon : 1509
+ Events with 1 e & 0 photon : 23449
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 47405
+Initiating analysis of dataset data_2017
+Treating the input files as BG for setting tree branches
+dataset data_2017 
+nentries 47405
+Analyzing dataset data_2017 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 4.45212e-319
+Weight ib pb-1 : 6.95272e-310
+globalSuperTightHalo2016Filter : 41101
+HBHENoiseFilter : 41101
+HBHEIsoNoiseFilter : 41101
+EcalDeadCellTriggerPrimitiveFilter : 41101
+ecalBadCalibReducedFilter : 41101
+BadPFMuonFilter : 41101
+PrimaryVertexFilter : 41101
+NVtx>0 : 41101
+Events Survived before genphomatch : 0
+Events Survived after genphomatch : 41101
+Events passing reco electron pass id & iso : 36960
+pass realphoton --> 0
+fail realphoton --> 0
+CR Events passing mt cut : 27362
+Events Survived after PreSelection : 26837
+Events having Jet matched to photon : 26837
+ Events with 0 e & 1 photon : 1961
+ Events with 1 e & 0 photon : 24876
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+TreeUtilities : FillChain 
+No. of Entries in this tree : 161188
+Initiating analysis of dataset data_2018
+Treating the input files as BG for setting tree branches
+dataset data_2018 
+nentries 161188
+Analyzing dataset data_2018 
+Applying electron scale factors ? 0
+Applying MET filters ? 1
+10 %
+20 %
+30 %
+40 %
+50 %
+60 %
+70 %
+80 %
+90 %
+Cross-section : 4.45212e-319
+Weight ib pb-1 : 6.95314e-310
+globalSuperTightHalo2016Filter : 53851
+HBHENoiseFilter : 53851
+HBHEIsoNoiseFilter : 53851
+EcalDeadCellTriggerPrimitiveFilter : 53851
+ecalBadCalibReducedFilter : 53851
+BadPFMuonFilter : 53851
+PrimaryVertexFilter : 53851
+NVtx>0 : 53851
+Events Survived before genphomatch : 0
+Events Survived after genphomatch : 53851
+Events passing reco electron pass id & iso : 48234
+pass realphoton --> 0
+fail realphoton --> 0
+CR Events passing mt cut : 35716
+Events Survived after PreSelection : 34850
+Events having Jet matched to photon : 34850
+ Events with 0 e & 1 photon : 2497
+ Events with 1 e & 0 photon : 32353
+ Events with 0 e & 1 photon and having pixel id  : 0
+remaining : 0
+=================
+hadd Target file: TTWGJ_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: TTWGJ_2016_CR_v18.root
+hadd Source file 2: TTWGJ_2017_CR_v18.root
+hadd Source file 3: TTWGJ_2018_CR_v18.root
+hadd Target path: TTWGJ_CR_v18.root:/
+hadd Target file: Run2_METdata_CR_v18.root
+hadd compression setting for all ouput: 1
+hadd Source file 1: Run2016_METdata_CR_v18.root
+hadd Source file 2: Run2017_METdata_CR_v18.root
+hadd Source file 3: Run2018_METdata_CR_v18.root
+hadd Target path: Run2_METdata_CR_v18.root:/

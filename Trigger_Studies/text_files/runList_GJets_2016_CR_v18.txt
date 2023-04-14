@@ -1,0 +1,4 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Summer16v3.GJets_DR-0p4_HT-100To200_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Summer16v3.GJets_DR-0p4_HT-200To400_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Summer16v3.GJets_DR-0p4_HT-400To600_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Summer16v3.GJets_DR-0p4_HT-600ToInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_v18.root

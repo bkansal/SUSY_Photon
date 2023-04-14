@@ -29,9 +29,6 @@ hadd -f TTWGJets_2017_CR_v18.root TTGJets_2017_CR_v18.root WGJets_2017_CR_v18.ro
 hadd -f TTJets_2017_CR_v18.root TTJetsHT_2017_CR_v18.root TTJetsinc_2017_CR_v18.root
 hadd -f TTWGJ_2017_CR_v18.root TTJets_2017_CR_v18.root TTWGJets_2017_CR_v18.root WJets_2017_CR_v18.root ST_2017_CR_v18.root
 
-
-
-
 ./fakerate runlist_TTG_2018_CR_v18.txt TTGJets_2018_CR_v18.root TTG_v17_2018
 ./fakerate runlist_WG_2018_CR_v18.txt WGJets_2018_CR_v18.root WG_v17_2018
 hadd -f TTWGJets_2018_CR_v18.root TTGJets_2018_CR_v18.root WGJets_2018_CR_v18.root

@@ -77,15 +77,15 @@ void Lostlepton::EventLoop(const char *data,const char *inputFileList) {
   cout<<"Saving hists for PDF & Scale syst? "<<savePDFscaleUnc<<endl;
   
   if(s_data.Contains("v17_2016")){
-    pufile = TFile::Open("PileupHistograms_2016_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2016_69mb_pm5.root","READ");
     cout<<"Applying L1 prefiring prob.? "<<apply_L1<<endl;
   }
   if(s_data.Contains("v17_2017")){
-    pufile = TFile::Open("PileupHistograms_2017_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2017_69mb_pm5.root","READ");
     cout<<"Applying L1 prefiring prob.? "<<apply_L1<<endl;
   }
   if(s_data.Contains("v17_2018")){
-    pufile = TFile::Open("PileupHistograms_2018_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2018_69mb_pm5.root","READ");
     cout<<"Applying HEM veto? "<<apply_HEMveto<<endl;    
   }
   TH1* puhist;
@@ -95,33 +95,34 @@ void Lostlepton::EventLoop(const char *data,const char *inputFileList) {
 
   if(highdphi)
     {
-      TF = TFile::Open("Runfull_Run2_TF_LL_v6_CD.root","READ");
-      TF = TFile::Open("lostlepton_highdphi.root","READ");
-      RK  = TFile::Open("RK_lowMET_data.root","READ");
+//      TF = TFile::Open("../factors/Runfull_Run2_TF_LL_v6_CD.root","READ");
+      TF = TFile::Open("../factors/lostlepton_highdphi.root","READ");
+      RK  = TFile::Open("../factors/RK_lowMET_data.root","READ");
 
     }
   else
     {
-      TF = TFile::Open("Runfull_Run2_TF_lowdphi_LL_v6_CD.root","READ");
-      RK  = TFile::Open("RK_lowMET_data.root","READ");
+      TF = TFile::Open("../factors/lostlepton_lowdphi.root","READ");
+//      TF = TFile::Open("../factors/Runfull_Run2_TF_lowdphi_LL_v6_CD.root","READ");
+      RK  = TFile::Open("../factors/RK_lowMET_data.root","READ");
 
     }
   if(!full_Run2)
     {
       if(s_data.Contains("2017")){
-	E_SF= TFile::Open("LeptonSFs.root","READ");
+	E_SF= TFile::Open("../factors/LeptonSFs.root","READ");
 	e_SF=(TH2F*)E_SF->Get("Muon_ID_SF_2017");
 	e_recoSF=(TH2F*)E_SF->Get("Muon_ISO_SF");
 	//          e_SF->Multiply(e_recoSF);
       }
       if(s_data.Contains("2018")){
-	E_SF= TFile::Open("LeptonSFs.root","READ");
+	E_SF= TFile::Open("../factors/LeptonSFs.root","READ");
 	e_SF=(TH2F*)E_SF->Get("Muon_ID_SF_2018");
 	e_recoSF=(TH2F*)E_SF->Get("Muon_ISO_SF");
 	
       }
       if(s_data.Contains("2016")){
-	E_SF= TFile::Open("LeptonSFs.root","READ");
+	E_SF= TFile::Open("../factors/LeptonSFs.root","READ");
 	e_SF=(TH2F*)E_SF->Get("Muon_ID_SF_2016");
 	e_recoSF=(TH2F*)E_SF->Get("Muon_ISO_SF");
       }

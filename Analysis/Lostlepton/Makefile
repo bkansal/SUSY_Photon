@@ -9,7 +9,7 @@ OBJECTS = $(SOURCES:.cc=.o)
 
 #Lostlepton
 #EXECUTABLE = analyzeLightBSM
-EXECUTABLE = lostlepton_LE
+EXECUTABLE = lostlepton_LM
 
 all: $(SOURCES) $(EXECUTABLE)
 

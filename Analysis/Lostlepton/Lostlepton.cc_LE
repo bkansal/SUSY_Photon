@@ -73,18 +73,17 @@ void Lostlepton::EventLoop(const char *data,const char *inputFileList) {
   TFile *pufile,*TF,*E_SF,*Egamma_SF,*TF2,*RK;
   cout<<"Applying electron scale factors ? "<<applyE_SF<<endl;
   cout<<"Saving hists for PDF & Scale syst? "<<savePDFscaleUnc<<endl;
-
   cout<<"Applying MET filters ? "<<apply_METfilters<<endl;
   if(s_data.Contains("v17_2016")){
-    pufile = TFile::Open("PileupHistograms_2016_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2016_69mb_pm5.root","READ");
     cout<<"Applying L1 prefiring prob.? "<<apply_L1<<endl;
   }
   if(s_data.Contains("v17_2017")){
-    pufile = TFile::Open("PileupHistograms_2017_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2017_69mb_pm5.root","READ");
     cout<<"Applying L1 prefiring prob.? "<<apply_L1<<endl;
   }
   if(s_data.Contains("v17_2018")){
-    pufile = TFile::Open("PileupHistograms_2018_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2018_69mb_pm5.root","READ");
     cout<<"Applying HEM veto? "<<apply_HEMveto<<endl;
   }
 
@@ -95,36 +94,36 @@ void Lostlepton::EventLoop(const char *data,const char *inputFileList) {
   if(highdphi)
   {
 
-    TF = TFile::Open("lostlepton_highdphi.root","READ");
-    RK  = TFile::Open("RK_lowMET_data.root","READ");
+    TF = TFile::Open("../factors/lostlepton_highdphi.root","READ");
+    RK  = TFile::Open("../factors/RK_lowMET_data.root","READ");
   }
   else
     {
-      TF = TFile::Open("lostlepton_lowdphi.root","READ");
-      RK  = TFile::Open("RK_lowMET_data.root","READ");
+      TF = TFile::Open("../factors/lostlepton_lowdphi.root","READ");
+      RK  = TFile::Open("../factors/RK_lowMET_data.root","READ");
     }
   if(!full_Run2)
     {
       if(s_data.Contains("2017")){
-	E_SF= TFile::Open("LeptonSFs.root","READ");
+	E_SF= TFile::Open("../factors/LeptonSFs.root","READ");
 	e_SF=(TH2F*)E_SF->Get("EleSF_2017");
 	e_recoSF=(TH2F*)E_SF->Get("EleSF_reco_2017");
 	  //          e_SF->Multiply(e_recoSF);
       }
       if(s_data.Contains("2018")){
-	E_SF= TFile::Open("LeptonSFs.root","READ");
+	E_SF= TFile::Open("../factors/LeptonSFs.root","READ");
 	e_SF=(TH2F*)E_SF->Get("EleSF_2018");
 	e_recoSF=(TH2F*)E_SF->Get("EleSF_reco_2018");
 	
       }
       if(s_data.Contains("2016")){
-	E_SF= TFile::Open("LeptonSFs.root","READ");
+	E_SF= TFile::Open("../factors/LeptonSFs.root","READ");
 	e_SF=(TH2F*)E_SF->Get("EleSF_2016");
 	e_recoSF=(TH2F*)E_SF->Get("EleSF_reco_2016");	
       }
     }
   // if(s_data.Contains("full")){
-  //   TF = TFile::Open("Runfull_Run2_TF_lowdphi_LE_v6_CD.root","READ");
+  //   TF = TFile::Open("../factors/ Runfull_Run2_TF_lowdphi_LE_v6_CD.root","READ");
   // }
   
   if(Tf=="sBin6")
@@ -599,7 +598,7 @@ HEMaffected = true; break;}
 	prob = btagcorr.GetCorrections(hadJets,hadJets_hadronFlavor,hadJets_HTMask);
 	prob0=prob[0];
 	prob1=(prob[1]+prob[2]+prob[3]);
-
+	//	cout<<"applybTagSFs 1"<<endl;
       }
 
 
@@ -957,6 +956,7 @@ HEMaffected = true; break;}
 		}
 	      int nbjets_org=nbjets;
 	      if(applybTagSFs  && s_data.Contains("v17")){
+
 		nbjets=0;
 		sBin6 = getBinNoV7_le(nbjets,nHadJets);
 		h_SBins_v6_CD_elec0->Fill(sBin6,wt*prob0);
@@ -1014,6 +1014,8 @@ HEMaffected = true; break;}
 		h_BTags_elec0->Fill(2.0,wt*prob[2]);
 		h_BTags_elec0->Fill(3.0,wt*prob[3]);
 		nbjets=nbjets_org;
+		//		cout<<"applybTagSFs 2"<<endl;
+
 	      }
 	      else 
 		{
@@ -1681,7 +1683,6 @@ HEMaffected = true; break;}
 	    double wtb=wt2;
 	    nbjets_org=nbjets;
             if(applybTagSFs  && s_data.Contains("v17") && !s_data.Contains("data")){
-              
 	      nbjets=0;
 	      if(!(EWselec && EWselec1)){	
 	      if(nHadJets==	2)     { if(MET<=300) {wt2=wt*tf_SP_2->GetBinContent(1)*mj_wt->GetBinContent(2);} else {wt2=wt*tf_SP_2->GetBinContent(1)*mj_wt->GetBinContent(3);} }

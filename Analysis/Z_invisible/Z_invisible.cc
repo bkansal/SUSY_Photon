@@ -15,7 +15,7 @@
 
 
 using namespace std;
-bool savePDFscaleUnc=false;
+bool savePDFscaleUnc=false; //Will not be needed
 bool applISRWtsTottbar=true;
 bool full_Run2=true;
 bool apply_METfilters=true;
@@ -24,7 +24,7 @@ bool apply_HEMveto=true;
 bool applybTagSFs=false;
 bool do_prediction=true;
 bool applyPUwt=true;
-bool applyPF=true;
+bool applyPF=false;
 bool applyPFsys=false;
 bool apply_trg=true;
 //bool elec=false, muon=true;
@@ -86,15 +86,15 @@ void Z_invisible::EventLoop(const char *data,const char *inputFileList) {
   cout<<"Saving hists for PDF & Scale syst? "<<savePDFscaleUnc<<endl;
   cout<<"Applying MET filters ? "<<apply_METfilters<<endl;
   if(s_data.Contains("v17_2016")){
-    pufile = TFile::Open("PileupHistograms_2016_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2016_69mb_pm5.root","READ");
     cout<<"Applying L1 prefiring prob.? "<<apply_L1<<endl;
   }
   if(s_data.Contains("v17_2017")){
-    pufile = TFile::Open("PileupHistograms_2017_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2017_69mb_pm5.root","READ");
     cout<<"Applying L1 prefiring prob.? "<<apply_L1<<endl;
   }
   if(s_data.Contains("v17_2018")){
-    pufile = TFile::Open("PileupHistograms_2018_69mb_pm5.root","READ");
+    pufile = TFile::Open("../factors/PileupHistograms_2018_69mb_pm5.root","READ");
     cout<<"Applying HEM veto? "<<apply_HEMveto<<endl;
   }
 
@@ -108,43 +108,24 @@ void Z_invisible::EventLoop(const char *data,const char *inputFileList) {
   TFile *PDF, *Scale;
   if(highdphi)
     {
-      TF = TFile::Open("Zinvisible_SF_v6.root","READ");
+      TF = TFile::Open("../factors/Zinvisible_SF_v6.root","READ");
       tf=(TH1D*)TF->FindObjectAny("h3");
 
-      PF = TFile::Open("purityfactor.root","READ");
+      PF = TFile::Open("../factors/purityfactor.root","READ");
       pf=(TGraphAsymmErrors*)PF->FindObjectAny("mc");
-      
-
-      PDF= TFile::Open("pdf_full_Run2.root","READ");
-      Scale= TFile::Open("scale_full_Run2.root","READ");
-
-      if(savePDFscaleUnc){
-	pdf=(TH2D*)PDF->FindObjectAny("TFratio_pdf");
-	scale=(TH2D*)Scale->FindObjectAny("TFratio_scale");
-      }
-      else{
-	pdf=(TH2D*)PDF->FindObjectAny("TFratio");
-	scale=(TH2D*)Scale->FindObjectAny("TFratio");
-      }
 
     }
 
   else
     {
-      TF = TFile::Open("Zinvisible_SF_v6.root","READ");
+      TF = TFile::Open("../factors/Zinvisible_SF_v6.root","READ");
       tf=(TH1D*)TF->FindObjectAny("h3");
       
-      TF3= TFile::Open("RK_lowMET_data.root","READ");
+      TF3= TFile::Open("../factors/RK_lowMET_data.root","READ");
       mj_wt= (TH1D*)TF3->Get("fr");
 
-      PF = TFile::Open("purityfactor.root","READ");
+      PF = TFile::Open("../factors/purityfactor.root","READ");
       pf=(TGraphAsymmErrors*)PF->FindObjectAny("mc");
-
-      PDF= TFile::Open("pdf_full_Run2.root","READ");
-      pdf=(TH2D*)PDF->FindObjectAny("PDFratio_pdf");
-
-      Scale= TFile::Open("scale_full_Run2.root","READ");
-      scale=(TH2D*)Scale->FindObjectAny("Scaleratio_scale"); 
     }
   Double_t *yg = pf->GetY();
   Double_t *yg_ = pf->GetY();
@@ -1102,19 +1083,6 @@ void Z_invisible::EventLoop(const char *data,const char *inputFileList) {
            else {wt3_sp[si]=yg[1]*wt;}
 	 }
      }
-     else{
-       for(int si=1;si<10;si++)
-	 {
-	   if(nbjets==0)  {wt2_sp[si]=scale->GetBinContent(1,si)*wt;} 
-	   else {wt2_sp[si]=scale->GetBinContent(2,si)*wt;}
-	 }
-       for(int si=1;si<100;si++)
-         {
-           if(nbjets==0)  {wt3_sp[si]=pdf->GetBinContent(1,si)*wt;}
-           else {wt3_sp[si]=pdf->GetBinContent(2,si)*wt;}
-
-	 }
-     }
    }
        
    int sBin7= getBinNoV6_EWplusSP_SR(EWselec,EWselec1 ,EWselec_Htag,EWselec_Wtag,nHadJets,nbjets,metstar.Pt());
@@ -1208,6 +1176,11 @@ void Z_invisible::EventLoop(const char *data,const char *inputFileList) {
        h_SBins_v6_CD->Fill(sBin6,wt);
        sBin6_ = getBinNoV7_le(nHadJets,nbjets);
        sBin6_50bin_= getBinNoV6_EWplusSP_CR(EWselec,EWselec1 ,EWselec_Htag,EWselec_Wtag,nHadJets,nbjets,metstar.Pt());
+       h_sigmawt->Fill(sBin6_50bin_,Weight*1000*lumiInfb);
+       h_totevts->Fill(sBin6_50bin_,1);
+       h_sigmawt_corr->Fill(sBin6_50bin_,puhist->GetBinContent(puhist->GetXaxis()->FindBin(min(TrueNumInteractions,puhist->GetBinLowEdge(puhist->GetNbinsX()+1)))));
+//       h_sigmawt_corr->Fill(sBin6_50bin_,Weight*1000*lumiInfb*(puhist->GetBinContent(puhist->GetXaxis()->FindBin(min(TrueNumInteractions,puhist->GetBinLowEdge(puhist->GetNbinsX()+1))))));
+
        h_SBins_v7_CD_sf[sBin6_50bin_]->Fill(sBin6_,wt);
        h_nJets->Fill(nHadJets,wt);
        h_MET->Fill(metstar.Pt(),wt);
@@ -1792,7 +1765,6 @@ int Z_invisible::getBinNoV6(TLorentzVector bestPhoton, int nHadJets){
 int Z_invisible::getBinNoV7_le(int nHadJets, int nbjets){  
   int sBin=-100,m_i=0;    
   if(nbjets==0) sBin=1;
-  //  else if(nbjets==1) sBin=2;
   else sBin=2;
   return sBin;
 }

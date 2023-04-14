@@ -1,0 +1,2 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZLLGJets_MonoPhoton_PtG-130_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZLLGJets_MonoPhoton_PtG-40to130_13TeV-madgraph_v18.root

@@ -1,0 +1,6 @@
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZJetsToNuNu_HT-1200To2500_13TeV-madgraph_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZJetsToNuNu_HT-200To400_13TeV-madgraph_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZJetsToNuNu_HT-2500ToInf_13TeV-madgraph_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZJetsToNuNu_HT-400To600_13TeV-madgraph_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZJetsToNuNu_HT-600To800_13TeV-madgraph_v18.root
+root://cmseos.fnal.gov//store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Fall17.ZJetsToNuNu_HT-800To1200_13TeV-madgraph_v18.root

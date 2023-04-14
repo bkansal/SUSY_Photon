@@ -37,7 +37,7 @@ class Fakerate : public NtupleVariables{
   int getBinNoV6_EWplusSP_SR(bool,bool,bool,int);
   int getBinNoV6_EWplusSP_CR(bool,bool,bool,bool,int,int);
   int getBinNoV7_le(int);
-  int getBinNoV7_le2(bool,bool,bool,bool,int);
+  int getBinNoV7_le2(bool,bool,bool,bool,int,int);
   
   double deepCSVvalue=0;
   double getGendRLepPho();
@@ -190,6 +190,10 @@ class Fakerate : public NtupleVariables{
   TH1D *h_dPhi_METjet2;
   TH1D *h_dPhi_METjet3;
   TH1D *h_dPhi_METjet4;
+  TH1D *h_jetphoratio;
+  TH1D *h_jetphoratio_elec0;
+  TH1D *h_genephoratio;
+  TH1D *h_genephoratio_elec0;
 
   TH2D *h2_MET_dPhiMETj1;
   TH2D *h2_MET_dPhiMETj2;
@@ -349,6 +353,8 @@ class Fakerate : public NtupleVariables{
   TH2D *h2_leadElectronPt_Phi_elec0;
   TH2D *h2_BestPhotonPt_jetmatchphoratio_elec0;
   TH2D *h2_BestPhotonPt_jetphoratio_elec0;
+  TH2D *h2_mindr_jetmatchphoratio_elec0;
+  TH2D *h2_mindr_jetmatchphoratio;
   TH1D *h_leadJetPt_elec0;
   TH1D *h_leadJetPhi_elec0;
   TH1D *h_leadJetEta_elec0;
@@ -959,6 +965,9 @@ void Fakerate::BookHistogram(const char *outFileName) {
   h_dPhi_METlep1=new TH1D("dPhi_METlep1","dphi between leading MET Vec and Muon",40,0,4);
   h2_BestPhotonPt_jetmatchphoratio=new TH2D("BestPhotonPt_jetmatchphoratio","Best Photon Pt (x axis) vs jet(match to photon) Pt/Photon Pt (yaxis)",300,0,1500,1000,0,5);
   h2_BestPhotonPt_jetphoratio=new TH2D("BestPhotonPt_jetphoratio","Best Photon Pt (x axis) vs jet Pt/Photon Pt (yaxis)",300,0,1500,1000,0,5);
+  h_jetphoratio=new TH1D("h_jetphoratio","jet Pt/Photon Pt",1000,0,5);
+  h_genephoratio=new TH1D("h_genephoratio","Photon Pt/gen e Pt",1000,0,5);
+
   h_minDr_Elejet1=new TH1D("h_minDr_Elejet1","dr b/w Reco lepton and Reco first leading jet ",500,0,5);
   h_minDr_Elejet2=new TH1D("h_minDr_Elejet2","dr b/w Reco lepton and Reco Second leading jet ",500,0,5);
   h_minDr_Elejet3=new TH1D("h_minDr_Elejet3","dr b/w Reco lepton and Reco third leading jet ",500,0,5);
@@ -1038,7 +1047,7 @@ void Fakerate::BookHistogram(const char *outFileName) {
   h2_nJetsQMultJet=new TH2D("nJetsQMultJet","x: Photon Pt vs charged multiplicity in the matching jet",25,0,25,50,0,50);
   h2_QMultlleadJetPt=new TH2D("QMultlleadJetPt","x: Lead Jet Pt vs y: Qmultiplicity in lead jet",300,0,1500,50,0,50);
   h2_QMultlleadbJet=new TH2D("QMultlleadbJet","x: Qmultiplicity in jet matched to e & y: Deep CSV for jet matched to e",50,0,50,300,0,3);
-  h2_QMultlleadbJet_v2=new TH2D("QMultlleadbJet_v2","x: Qmultiplicity in jet matched to EMobject as e & y: dR(b tag,EM object as e)",300,0,1500,300,-3,3);
+  h2_QMultlleadbJet_v2=new TH2D("QMultlleadbJet_v2","x: Qmultiplicity in jet matched to EMobject as e & y: dR(b tag,EM object as e)",300,0,1500,1000,0,5);
 
   
   h_nvtx_elec0=new TH1D("nvtx_elec0","no. of vertices",100,0,100);
@@ -1065,7 +1074,8 @@ void Fakerate::BookHistogram(const char *outFileName) {
   h_MET_CaloMET_elec0=new TH1D("MET_CaloMET_elec0","MET/Calo MET ",500,0,10);
   h_dPhi_MET_CaloMET_elec0=new TH1D("dPhi_MET_CaloMET_elec0","dPhi(MET,Calo MET) ",80,-4,4);
   h_HT5HT_elec0=new TH1D("HT5HT_elec0"," HT5/HT ",100,0,3);
-
+  h_jetphoratio_elec0=new TH1D("h_jetphoratio_elec0","jet Pt/Photon Pt",1000,0,5);
+  h_genephoratio_elec0=new TH1D("h_genephoratio_elec0","Photon Pt/gen e Pt",1000,0,5);
   h_dPhi_phojet1_elec0=new TH1D("dPhi_phojet1_elec0","dphi between photon and Jet1",80,-4,4);
   h_dPhi_phojet2_elec0=new TH1D("dPhi_phojet2_elec0","dphi between photon and Jet2",80,-4,4);
   h_dPhi_phoMET_elec0=new TH1D("dPhi_phoMET_elec0","dphi between photon and MET",80,-4,4);
@@ -1173,10 +1183,11 @@ void Fakerate::BookHistogram(const char *outFileName) {
   h2_nJetsQMultJet_elec0=new TH2D("nJetsQMultJet_elec0","x: Photon Pt vs charged multiplicity in the matching jet",25,0,25,50,0,50);
   h2_QMultlleadJetPt_elec0=new TH2D("QMultlleadJetPt_elec0","x: Lead Jet Pt vs y: Qmultiplicity in lead jet",300,0,1500,50,0,50);
   h2_QMultlleadbJet_elec0=new TH2D("QMultlleadbJet_elec0","x: Qmultiplicity in jet matched to e & y: Deep CSV for jet matched to e",50,0,50,300,0,3);
-  h2_QMultlleadbJet_v2_elec0=new TH2D("QMultlleadbJet_v2_elec0","x: Qmultiplicity in jet matched to EMobject as e & y: dR(b tag,EM object as e)",50,0,50,150,0,3);
+  h2_QMultlleadbJet_v2_elec0=new TH2D("QMultlleadbJet_v2_elec0","x: Qmultiplicity in jet matched to EMobject as e & y: dR(b tag,EM object as e)",300,0,1500,1000,0,5);
   h2_BestPhotonPt_jetmatchphoratio_elec0=new TH2D("BestPhotonPt_jetmatchphoratio_elec0","Best Photon Pt (x axis) vs jet(match to photon) Pt/Photon Pt (yaxis)",300,0,1500,1000,0,5);
   h2_BestPhotonPt_jetphoratio_elec0=new TH2D("BestPhotonPt_jetphoratio_elec0","Best Photon Pt (x axis) vs jet Pt/Photon Pt (yaxis)",300,0,1500,1000,0,5);
-
+  h2_mindr_jetmatchphoratio_elec0=new TH2D("h2_mindr_jetmatchphoratio_elec0","mindr (x axis) vs jet(match to photon) Pt/Photon Pt (yaxis)",1000,0,5,1000,0,5);
+  h2_mindr_jetmatchphoratio=new TH2D("h2_mindr_jetmatchphoratio","mindr (x axis) vs jet(match to photon) Pt/Photon Pt (yaxis)",1000,0,5,1000,0,5);
 
   
   h_nvtx_elec1_closure=new TH1D("nvtx_elec1_closure","no. of vertices",100,0,100);

@@ -1,0 +1,2 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Summer16v3.ZLLGJets_MonoPhoton_PtG-130_TuneCUETP8M1_13TeV-madgraph.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Summer16v3.ZLLGJets_MonoPhoton_PtG-40to130_TuneCUETP8M1_13TeV-madgraph-pythia8.root

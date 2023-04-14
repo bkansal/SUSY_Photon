@@ -66,7 +66,7 @@ class BTagCorrector {
 		    h_eff_udsg->Divide(d_eff_udsg);
                     //cout<<"!h_eff_udsg"<<endl;
 		  }
-		  //		  cout<<"out of seteff func : "<<endl;
+		  cout<<"out of seteff func : "<<endl;
 		}
 		void SetCalib(string cfile){
 			//initialize btag helper classes

@@ -126,6 +126,9 @@ class Z_invisible : public NtupleVariables{
   double QMultLow[6]={0,2,4,7,100};
   vector<TLorentzVector> allBestPhotons;
   //histograms
+  TH1D *h_sigmawt_corr;
+  TH1D *h_sigmawt;
+  TH1D *h_totevts;
   TH1D *h_nvtx;
   TH1D *h_nEvts;
   TH1I *h_RunNum;
@@ -884,6 +887,9 @@ void Z_invisible::BookHistogram(const char *outFileName) {
   d_eff_udsg = new TH2F("d_eff_udsg","d_eff_udsg",xbins.size()-1,&(xbins[0]), ybins.size()-1,&(ybins[0]));
   n_eff_udsg = new TH2F("n_eff_udsg","n_eff_udsg",xbins.size()-1,&(xbins[0]), ybins.size()-1,&(ybins[0]));   
 
+  h_totevts = new TH1D("totevts","Total events without weight",52,0,52);
+  h_sigmawt = new TH1D("sigmawt","Total events with (sigma*lumi)/xsec wts",52,0,52);
+  h_sigmawt_corr = new TH1D("sigmawt_corr","Total events with corrections to wts",52,0,52);
 
 
   h_nvtx=new TH1D("nvtx","no. of vertices",100,0,100);

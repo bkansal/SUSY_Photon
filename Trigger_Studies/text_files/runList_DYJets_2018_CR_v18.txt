@@ -1,0 +1,7 @@
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-100to200_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-1200to2500_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-200to400_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-2500toInf_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-400to600_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-600to800_13TeV-madgraph_v18.root
+/eos/uscms/store/user/bkansal/GMSB_skims_TreesV18/SignalRegion/skims/SR_Autumn18.DYJetsToLL_M-50_HT-800to1200_13TeV-madgraph_v18.root

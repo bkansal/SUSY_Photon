@@ -21,4 +21,8 @@ There is a best way to submit condor jobs using ```splitRunList.C``` script.
 ```
 root -l -q 'splitRunList.C("Run2016B_SingleElectron_17Jul2018.txt",10)'
 ```
-Using above command, 10 condor jobs will be submitted. For example, if there are 400 files in a text file then 40 files/ job will run.
+Using above command, 10 condor jobs will be submitted. For example, if there are 400 files in a text file then 40 files/ job will run. After job completion, all similar file should be combined using ```hadd``` command or you can also use following code for more convienence.
+```
+root -l -q 'findFailedJobs.C("Run2016B_SingleElectron_17Jul2018")'
+```
+For calculating trigger efficiency, you can use [GetEfficiency.C script](https://github.com/bkansal/SUSY_Photon/tree/main/plotting_codes/trigger_eff).

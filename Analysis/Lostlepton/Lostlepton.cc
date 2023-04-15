@@ -293,8 +293,9 @@ void Lostlepton::EventLoop(const char *data,const char *inputFileList) {
       }
     if(!s_data.Contains("data") && !s_data.Contains("FastSim") && applytrg)
       {
-	if(MET>300) wt = wt * 1.1 * (((TMath::Erf((MET - p0)/p1)+1)/2.0)*p2);
-	else wt= wt*0.95;
+	wt = wt * 1.1 * (((TMath::Erf((MET - p0)/p1)+1)/2.0)*p2);
+	//	if(MET>300) wt = wt * 1.1 * (((TMath::Erf((MET - p0)/p1)+1)/2.0)*p2);
+	//	else wt= wt*0.95;
       }
 
     //=================================================================================================

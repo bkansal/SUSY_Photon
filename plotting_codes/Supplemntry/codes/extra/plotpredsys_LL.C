@@ -1,0 +1,149 @@
+void plotpredsys_LL()
+{
+  gStyle->SetOptStat(0);
+  TLatex textOnTop,intLumiE,textOnTop2;
+
+  TString path="../lostlepton/rootoutput/new/nominal_fr/LL/";
+  TString path1="../lostlepton/";
+  TString path2="../lostlepton/rootoutput/new/dataMC_TFsep/LL/";
+  TString filename  = path+"Run2_METdata_CR_v18.root";
+  TString filename1  = path1+"Lostlepton_highdphi.root";
+  TString filename2  = path2+"TTWGJ_CR_v18.root";
+  TFile *f = new TFile(filename);
+  TFile *f1 = new TFile(filename1);
+  TFile *f2 = new TFile(filename2);
+  TFile *f_syserr= new TFile("factors/LL_sys_v1.root");
+  TCanvas *c1= new TCanvas("stackhist","stackhist",1600,900);
+  c1->cd();
+  TH1D *pred = (TH1D*)f->Get("AllSBins_v6_CD_EW_50bin_elec1_closure");
+  TH1D *fr = (TH1D*)f1->Get("fr");
+  TH1D *sr = (TH1D*)f1->Get("AllSBins_v6_CD_EW_50bin_elec1_closure");
+  TH1D *srmc = (TH1D*)f2->Get("AllSBins_v6_CD_EW_50bin_elec0");
+  TH1D *cr = (TH1D*)f->Get("AllSBins_v6_CD_EW_50bin_elec1");
+
+  TH1D *syserr = (TH1D*)f_syserr->Get("JERC");
+  TH1D *predsys = new TH1D("predsys","systematics",52,0,52);
+  double xmin=1,xmax = 46,xmin_=1,xmax_=46;
+  double ymin=0 , ymax=1.99, ymin_=0.012 , ymax_=100000, yset_=2000;
+  c1->SetLogy();
+  syserr->Print("all");
+  for(int i=1; i<46; i++)
+    {
+      //predsys->SetBinError(i+1,pred->GetBinContent(i+1)*pow(pow(srmc->GetBinError(i+1)/srmc->GetBinContent(i+1),2)+pow(syserr->GetBinError(i),2),0.5));
+      predsys->SetBinError(i+1,pred->GetBinContent(i+1)*pow(pow(2*syserr->GetBinError(i),2),0.5));
+      predsys->SetBinContent(i+1,pred->GetBinContent(i+1));
+      cr->SetBinContent(i+1,pred->GetBinContent(i+1));
+      cr->SetBinError(i+1,sr->GetBinError(i+1));
+    }
+  pred->SetTitle(0);
+  pred->GetXaxis()->SetRangeUser(xmin,xmax);
+  pred->GetYaxis()->SetLabelSize(0.05);
+  pred->GetYaxis()->SetTitle("Events");
+  pred->GetYaxis()->SetTitleSize(0.05);
+  pred->GetYaxis()->SetTitleOffset(0.82);
+  pred->GetYaxis()->SetRangeUser(ymin_,ymax_);
+  cr->SetMarkerStyle(20);
+  cr->SetMarkerSize(0.01);
+  cr->SetMarkerColor(kBlack);
+  cr->SetLineColor(kBlack);
+  cr->SetLineWidth(2);
+  pred->SetLineColor(kTeal+9);
+  pred->SetFillColor(kTeal+9);
+  pred->GetXaxis()->SetTitleOffset(0.82);
+  pred->GetXaxis()->SetTitle("Bin index");
+  pred->GetXaxis()->SetTitleSize(0.05);
+  sr->SetLineColor(kBlack);
+  pred->Draw("hist");
+  predsys->SetFillStyle(3244);
+  predsys->SetMarkerColor(kGray+3);
+  predsys->SetFillColor(kGray+3);
+  predsys->Draw("E2 sames");
+  
+  cr->Draw("E0 sames");
+  cr->SetTitle(0);
+  cr->Print("all");
+  predsys->Print("all");
+
+  for(double j=1;j<=pred->GetNbinsX();j++){
+    TString temp2 = to_string(j-1);
+    if((j-1)==5){temp2=to_string(5); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==10){temp2=to_string(10); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==15){temp2=to_string(15); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==20){temp2=to_string(20); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==25){temp2=to_string(25); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==30){temp2=to_string(30); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==35){temp2=to_string(35); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==40){temp2=to_string(40); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+    else if((j-1)==45){temp2=to_string(45); pred->GetXaxis()->SetBinLabel(j+0.5,temp2);}
+
+  }
+
+  pred->GetXaxis()->LabelsOption("h");
+  pred->GetXaxis()->SetLabelSize(0.07);
+  pred->GetXaxis()->SetLabelOffset(0.004);
+  pred->GetXaxis()->SetTickLength(0);
+  TF1 *f1_=new TF1("f1_","x",1.5,46.5);
+  TGaxis *A1 = new TGaxis(1,ymin_,46,ymin_,"f1_",45,"U");
+  A1->SetLabelSize(0.1);
+  A1->Draw("B");
+  textOnTop.SetTextSize(0.045);
+  intLumiE.SetTextSize(0.04);
+  textOnTop2.SetTextSize(0.04);
+  textOnTop.DrawLatexNDC(0.1,0.915,"CMS");
+  textOnTop2.DrawLatexNDC(0.15,0.915," #it{#bf{Preliminary}}");
+  intLumiE.DrawLatexNDC(0.76,0.92,"#bf{137 fb^{-1} (13 TeV)}");
+
+  
+   yset_=3.5;
+  TLine *line1V6=new TLine( 8,ymin_,  8,3000*yset_);
+  TLine *line2V6=new TLine(14,ymin_, 14,3000*yset_);
+  TLine *line3V6=new TLine(19,ymin_, 19,3000*yset_);
+  TLine *line4V6=new TLine(24,ymin_, 24,3000*yset_);
+  TLine *line5V6=new TLine(29,ymin_, 29,3000*yset_);
+  TLine *line6V6=new TLine(34,ymin_, 34,3000*yset_);
+  TLine *line7V6=new TLine(40,ymin_, 40,3000*yset_);
+  TLine *line8V6=new TLine(46,ymin_, 46,3000*yset_);
+
+  line1V6->Draw();      line2V6->Draw();  line3V6->Draw();
+  line4V6->Draw();      line5V6->Draw();
+  line6V6->Draw();      line7V6->Draw();
+  TArrow *arrow1 = new TArrow( 1,yset_*1200, 8,yset_*1200,0.01,"<|>");
+  TArrow *arrow2 = new TArrow( 8,yset_*1200,14,yset_*1200,0.01,"<|>");
+  TArrow *arrow3 = new TArrow(14,yset_*1200, 19,yset_*1200,0.01,"<|>");
+  TArrow *arrow4 = new TArrow(19,yset_*1200, 24,yset_*1200,0.01,"<|>");
+  TArrow *arrow5 = new TArrow(24,yset_*1200, 29,yset_*1200,0.01,"<|>");
+  TArrow *arrow6 = new TArrow(29,yset_*1200, 34,yset_*1200,0.01,"<|>");
+  TArrow *arrow7 = new TArrow(34,yset_*1200, 40,yset_*1200,0.01,"<|>");
+  TArrow *arrow8 = new TArrow(40,yset_*1200, 46,yset_*1200,0.01,"<|>");
+
+  arrow1->Draw(); arrow2->Draw(); arrow3->Draw();
+  arrow4->Draw(); arrow5->Draw(); arrow6->Draw();
+  arrow7->Draw(); arrow8->Draw();
+  TLatex Tl;
+
+  Tl.SetTextSize(0.04);
+  Tl.DrawLatex(3.5,1980*yset_,"N^{ 0}_{ 2-4}");
+  Tl.DrawLatex(10.0,1980*yset_,"N^{ 0}_{ 5-6}");
+  Tl.DrawLatex(15.5,1980*yset_,"N^{ 0}_{ #geq7}");
+  Tl.DrawLatex(20.5,1980*yset_,"N^{ #geq1}_{ 2-4}");
+  Tl.DrawLatex(25.5,1980*yset_,"N^{ #geq1}_{ 5-6}");
+  Tl.DrawLatex(30.5,1980*yset_,"N^{ #geq1}_{ #geq7}");
+  Tl.SetTextSize(0.04);
+  Tl.DrawLatex(35.5,1980*yset_,"V tag");
+  Tl.DrawLatex(41.5,1980*yset_,"H tag");
+
+  TLegend *legend=new TLegend(0.2,0.82,0.85,0.89);
+  legend->SetNColumns(3);
+  legend->SetBorderSize(0);
+  legend->SetFillColor(0);
+  legend->SetTextSize(0.04);			    
+  legend->AddEntry(pred,"Predictions","f");
+  legend->AddEntry(sr,"Statistical unc.","epl");
+  legend->AddEntry(predsys,"Systematic unc.","f");
+  legend->Draw();
+
+  c1->SaveAs("png/LL_prediction.png");
+  c1->SaveAs("pdf/LL_prediction.pdf");
+
+}
+  

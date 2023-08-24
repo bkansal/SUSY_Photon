@@ -1,0 +1,608 @@
+#include"TBrowser.h"
+#include"TF1.h"
+#include<string>
+#include<vector>
+#include"TGraphErrors.h"
+#include"TGraph.h"
+#include"TLegend.h"
+#include"TLatex.h"
+#include"TCanvas.h"
+#include"THStack.h"
+#include"TStyle.h"
+#include"TGraphAsymmErrors.h"
+
+vector<int> col={kGray,kOrange,kTeal+9,kCyan-1,kCyan-1,kBlack};
+
+void printRK_0pho(TString varname = "AllSBins_v6_CD_EW_50bin",int xmin=1, int xmax=46, int rebin=1)
+//void printRK_0pho( bool Kvalid=false,bool ExpvsPred=true,bool SRvsCR=false)
+{
+  gStyle->SetPalette(1);
+  bool Kvalid=true, ExpvsPred=false,  SRvsCR=false;  
+  TString path1="rootoutput/Kvalid_v2/EWK_v2.root"; 
+  TString path2_closure="rootoutput/Kvalid_v2/EWK_v2.root"; 
+  TString pdf,png;
+  
+  TFile *LL_lowdphi = TFile::Open(path1,"READ"); 
+  TFile *LL_highdphi = TFile::Open(path1,"READ"); 
+  TH1D *fr= new TH1D("fr","R x K factor for data in low MET",52,0,52); 
+  TH1D *k_valid= new TH1D("k_valid"," K validation factor for data in low MET",52,0,52);
+  TH1D *JERC;
+   TFile *Multi = TFile::Open("rootoutput/Kvalid_v2/Run2_METdata.root","READ"); 
+   TFile *Multi_mc = TFile::Open("rootoutput/Kvalid_v2/GJetsQCD_new_v18.root","READ"); 
+   //   TFile *Multi_mc = TFile::Open("rootoutput/final/KmcValid_check/GJets_wt1/GJetsQCD_new_v18.root","READ");
+   //   TFile *Multi_mc = TFile::Open("rootoutput/final/KmcValid_check/GJets_wt2/GJetsQCD_new_v18.root","READ");         
+   /* //TFile *Multi_mc = TFile::Open("rootoutput/Kvalid_v2 /QCD_v18.root","READ");*/
+  TH1D *CR=(TH1D*)Multi_mc->FindObjectAny("AllSBins_v6_CD_EW_50bin_AB");
+  TH1D *SR=(TH1D*)Multi_mc->FindObjectAny("AllSBins_v6_CD_EW_50bin_CD");
+
+  TH2D *ewk_highdphi_nb0=(TH2D*)LL_lowdphi->FindObjectAny("nJetsMET_v2_C");
+  TH2D *ewk_lowdphi_nb0=(TH2D*)LL_lowdphi->FindObjectAny("nJetsMET_v2_A");
+  TH2D *ewk_highdphi_nb1=(TH2D*)LL_lowdphi->FindObjectAny("nJetsMET_v2_D");
+  TH2D *ewk_lowdphi_nb1=(TH2D*)LL_lowdphi->FindObjectAny("nJetsMET_v2_B");
+
+  TH1D *ewk_highdphi_Wtag=(TH1D*)LL_lowdphi->FindObjectAny("nJetsMET_R");
+  TH1D *ewk_lowdphi_Wtag=(TH1D*)LL_lowdphi->FindObjectAny("nJetsMET_P");
+  TH1D *ewk_highdphi_Htag=(TH1D*)LL_lowdphi->FindObjectAny("nJetsMET_S");
+  TH1D *ewk_lowdphi_Htag=(TH1D*)LL_lowdphi->FindObjectAny("nJetsMET_Q");  
+
+  TH2D *R_highdphi_nb0_data=(TH2D*)Multi->FindObjectAny("nJetsMET_v2_C");
+  TH2D *R_lowdphi_nb0_data=(TH2D*)Multi->FindObjectAny("nJetsMET_v2_A");
+  TH2D *R_highdphi_nb1_data=(TH2D*)Multi->FindObjectAny("nJetsMET_v2_D");
+  TH2D *R_lowdphi_nb1_data=(TH2D*)Multi->FindObjectAny("nJetsMET_v2_B");
+
+  TH1D *R_highdphi_Wtag_data=(TH1D*)Multi->FindObjectAny("nJetsMET_R");
+  TH1D *R_lowdphi_Wtag_data=(TH1D*)Multi->FindObjectAny("nJetsMET_P");
+  TH1D *R_highdphi_Htag_data=(TH1D*)Multi->FindObjectAny("nJetsMET_S");
+  TH1D *R_lowdphi_Htag_data=(TH1D*)Multi->FindObjectAny("nJetsMET_Q");
+
+  R_highdphi_nb0_data->Add(ewk_highdphi_nb0,-1);
+  R_highdphi_nb1_data->Add(ewk_highdphi_nb1,-1);
+  R_highdphi_Wtag_data->Add(ewk_highdphi_Wtag,-1);
+  R_highdphi_Htag_data->Add(ewk_highdphi_Htag,-1);
+  R_lowdphi_nb0_data->Add(ewk_lowdphi_nb0,-1);
+  R_lowdphi_nb1_data->Add(ewk_lowdphi_nb1,-1);
+  R_lowdphi_Wtag_data->Add(ewk_lowdphi_Wtag,-1);
+  R_lowdphi_Htag_data->Add(ewk_lowdphi_Htag,-1);
+  /*
+  R_highdphi_nb0_data->Divide(R_lowdphi_nb0_data);
+  R_highdphi_nb1_data->Divide(R_lowdphi_nb1_data);
+  R_highdphi_Wtag_data->Divide(R_lowdphi_Wtag_data);
+  R_highdphi_Htag_data->Divide(R_lowdphi_Htag_data);
+  */
+  cout<<"/////////// Fake MET Data Events in low dphi region : "<<endl;
+  cout<<" 0b 2-4 : "<<R_lowdphi_nb0_data->GetBinContent(1,1)<<" :  "<< R_lowdphi_nb0_data->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 0b 5-6 : "<<R_lowdphi_nb0_data->GetBinContent(1,2)<<" :  "<< R_lowdphi_nb0_data->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 0b >7 : "<<R_lowdphi_nb0_data->GetBinContent(1,3)<<" :  "<< R_lowdphi_nb0_data->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" 1b 2-4 : "<<R_lowdphi_nb1_data->GetBinContent(1,1)<<" :  "<< R_lowdphi_nb1_data->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 1b 5-6 : "<<R_lowdphi_nb1_data->GetBinContent(1,2)<<" :  "<< R_lowdphi_nb1_data->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 1b >7 : "<<R_lowdphi_nb1_data->GetBinContent(1,3)<<" :  "<< R_lowdphi_nb1_data->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" WTag : "<<R_lowdphi_Wtag_data->GetBinContent(1)<<" : "<<R_lowdphi_Wtag_data->GetBinContent(2)<<" = "<<endl;
+  cout<<" HTag : "<<R_lowdphi_Htag_data->GetBinContent(1)<<" : "<<R_lowdphi_Htag_data->GetBinContent(2)<<" = "<<endl;
+
+
+  
+  cout<<"/////////// Fake MET Data Events in high dphi region : "<<endl;
+  cout<<" 0b 2-4 : "<<R_highdphi_nb0_data->GetBinContent(1,1)<<" :  "<< R_highdphi_nb0_data->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 0b 5-6 : "<<R_highdphi_nb0_data->GetBinContent(1,2)<<" :  "<< R_highdphi_nb0_data->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 0b >7 : "<<R_highdphi_nb0_data->GetBinContent(1,3)<<" :  "<< R_highdphi_nb0_data->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" 1b 2-4 : "<<R_highdphi_nb1_data->GetBinContent(1,1)<<" :  "<< R_highdphi_nb1_data->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 1b 5-6 : "<<R_highdphi_nb1_data->GetBinContent(1,2)<<" :  "<< R_highdphi_nb1_data->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 1b >7 : "<<R_highdphi_nb1_data->GetBinContent(1,3)<<" :  "<< R_highdphi_nb1_data->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" WTag : "<<R_highdphi_Wtag_data->GetBinContent(1)<<" : "<<R_highdphi_Wtag_data->GetBinContent(2)<<" = "<<endl;
+  cout<<" HTag : "<<R_highdphi_Htag_data->GetBinContent(1)<<" : "<<R_highdphi_Htag_data->GetBinContent(2)<<" = "<<endl;
+
+  R_highdphi_nb0_data->Divide(R_lowdphi_nb0_data);                                                                             
+  R_highdphi_nb1_data->Divide(R_lowdphi_nb1_data);                                                                             
+  R_highdphi_Wtag_data->Divide(R_lowdphi_Wtag_data);                                                                           
+  R_highdphi_Htag_data->Divide(R_lowdphi_Htag_data);                                                                           
+
+
+  
+  cout<<"/////////// R = high dphi region/low dphi region : "<<endl;
+  cout<<" 0b 2-4 : "<<R_highdphi_nb0_data->GetBinContent(1,1)<<" :  "<< R_highdphi_nb0_data->GetBinContent(2,1)<<" = "<<R_highdphi_nb0_data->GetBinContent(2,1)/R_highdphi_nb0_data->GetBinContent(1,1)<<endl;
+  cout<<" 0b 5-6 : "<<R_highdphi_nb0_data->GetBinContent(1,2)<<" : "<< R_highdphi_nb0_data->GetBinContent(2,2)<<" = "<<R_highdphi_nb0_data->GetBinContent(2,2)/R_highdphi_nb0_data->GetBinContent(1,2)<<endl;
+  cout<<" 0b >7 : "<<R_highdphi_nb0_data->GetBinContent(1,3)<<" :  "<< R_highdphi_nb0_data->GetBinContent(2,3)<<" = "<<R_highdphi_nb0_data->GetBinContent(2,3)/R_highdphi_nb0_data->GetBinContent(1,3)<<endl;
+  cout<<" 1b 2-4 : "<<R_highdphi_nb1_data->GetBinContent(1,1)<<" :  "<< R_highdphi_nb1_data->GetBinContent(2,1)<<" = "<<R_highdphi_nb1_data->GetBinContent(2,1)/R_highdphi_nb1_data->GetBinContent(1,1)<<endl;
+  cout<<" 1b 5-6 : "<<R_highdphi_nb1_data->GetBinContent(1,2)<<" :  "<< R_highdphi_nb1_data->GetBinContent(2,2)<<" = "<<R_highdphi_nb1_data->GetBinContent(2,2)/R_highdphi_nb1_data->GetBinContent(1,2)<<endl;
+  cout<<" 1b >7 : "<<R_highdphi_nb1_data->GetBinContent(1,3)<<" :  "<< R_highdphi_nb1_data->GetBinContent(2,3)<<" = "<<R_highdphi_nb1_data->GetBinContent(2,3)/R_highdphi_nb1_data->GetBinContent(1,3)<<endl;
+  cout<<" WTag : "<<R_highdphi_Wtag_data->GetBinContent(1)<<" : "<<R_highdphi_Wtag_data->GetBinContent(2)<<" = "<<R_highdphi_Wtag_data->GetBinContent(2)/R_highdphi_Wtag_data->GetBinContent(1)<<endl;
+  cout<<" HTag : "<<R_highdphi_Htag_data->GetBinContent(1)<<" : "<<R_highdphi_Htag_data->GetBinContent(2)<<" = "<<R_highdphi_Htag_data->GetBinContent(2)/R_highdphi_Htag_data->GetBinContent(1)<<endl;
+
+  cout<<"/////////// Data R(low MET) region"<<endl;
+  cout<<R_highdphi_nb0_data->GetBinError(1,1)<<endl;
+  cout<<R_highdphi_nb0_data->GetBinError(1,2)<<endl;
+  cout<<R_highdphi_nb0_data->GetBinError(1,3)<<endl;
+  cout<<R_highdphi_nb1_data->GetBinError(1,1)<<endl;
+  cout<<R_highdphi_nb1_data->GetBinError(1,2)<<endl;
+  cout<<R_highdphi_nb1_data->GetBinError(1,3)<<endl;
+  cout<<R_highdphi_Wtag_data->GetBinError(1)<<endl;
+  cout<<R_highdphi_Htag_data->GetBinError(1)<<endl;
+
+  cout<<"/////////// Data R(high MET) region"<<endl;
+  cout<<R_highdphi_nb0_data->GetBinError(2,1)<<endl;
+  cout<<R_highdphi_nb0_data->GetBinError(2,2)<<endl;
+  cout<<R_highdphi_nb0_data->GetBinError(2,3)<<endl;
+  cout<<R_highdphi_nb1_data->GetBinError(2,1)<<endl;
+  cout<<R_highdphi_nb1_data->GetBinError(2,2)<<endl;
+  cout<<R_highdphi_nb1_data->GetBinError(2,3)<<endl;
+  cout<<R_highdphi_Wtag_data->GetBinError(2)<<endl;
+  cout<<R_highdphi_Htag_data->GetBinError(2)<<endl;
+
+
+  cout<<"  ///////////////////////////////// R using MC ///////////////////////////////// "<<endl;
+  
+  TH2D *R_highdphi_nb0_mc=(TH2D*)Multi_mc->FindObjectAny("nJetsMET_v2_C");
+  TH2D *R_lowdphi_nb0_mc=(TH2D*)Multi_mc->FindObjectAny("nJetsMET_v2_A");
+  TH2D *R_highdphi_nb1_mc=(TH2D*)Multi_mc->FindObjectAny("nJetsMET_v2_D");
+  TH2D *R_lowdphi_nb1_mc=(TH2D*)Multi_mc->FindObjectAny("nJetsMET_v2_B");
+
+  TH1D *R_highdphi_Wtag_mc=(TH1D*)Multi_mc->FindObjectAny("nJetsMET_R");
+  TH1D *R_lowdphi_Wtag_mc=(TH1D*)Multi_mc->FindObjectAny("nJetsMET_P");
+  TH1D *R_highdphi_Htag_mc=(TH1D*)Multi_mc->FindObjectAny("nJetsMET_S");
+  TH1D *R_lowdphi_Htag_mc=(TH1D*)Multi_mc->FindObjectAny("nJetsMET_Q");
+
+  cout<<"/////////// Fake MET Data Events in low dphi region : "<<endl;
+  cout<<" 0b 2-4 : "<<R_lowdphi_nb0_mc->GetBinContent(1,1)<<" :  "<< R_lowdphi_nb0_mc->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 0b 5-6 : "<<R_lowdphi_nb0_mc->GetBinContent(1,2)<<" :  "<< R_lowdphi_nb0_mc->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 0b >7 : "<<R_lowdphi_nb0_mc->GetBinContent(1,3)<<" :  "<< R_lowdphi_nb0_mc->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" 1b 2-4 : "<<R_lowdphi_nb1_mc->GetBinContent(1,1)<<" :  "<< R_lowdphi_nb1_mc->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 1b 5-6 : "<<R_lowdphi_nb1_mc->GetBinContent(1,2)<<" :  "<< R_lowdphi_nb1_mc->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 1b >7 : "<<R_lowdphi_nb1_mc->GetBinContent(1,3)<<" :  "<< R_lowdphi_nb1_mc->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" WTag : "<<R_lowdphi_Wtag_mc->GetBinContent(1)<<" : "<<R_lowdphi_Wtag_mc->GetBinContent(2)<<" = "<<endl;
+  cout<<" HTag : "<<R_lowdphi_Htag_mc->GetBinContent(1)<<" : "<<R_lowdphi_Htag_mc->GetBinContent(2)<<" = "<<endl;
+
+    cout<<"/////////// Fake MET Data Events in high dphi region : "<<endl;
+  cout<<" 0b 2-4 : "<<R_highdphi_nb0_mc->GetBinContent(1,1)<<" :  "<< R_highdphi_nb0_mc->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 0b 5-6 : "<<R_highdphi_nb0_mc->GetBinContent(1,2)<<" :  "<< R_highdphi_nb0_mc->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 0b >7 : "<<R_highdphi_nb0_mc->GetBinContent(1,3)<<" :  "<< R_highdphi_nb0_mc->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" 1b 2-4 : "<<R_highdphi_nb1_mc->GetBinContent(1,1)<<" :  "<< R_highdphi_nb1_mc->GetBinContent(2,1)<<" = "<<endl;
+  cout<<" 1b 5-6 : "<<R_highdphi_nb1_mc->GetBinContent(1,2)<<" :  "<< R_highdphi_nb1_mc->GetBinContent(2,2)<<" = "<<endl;
+  cout<<" 1b >7 : "<<R_highdphi_nb1_mc->GetBinContent(1,3)<<" :  "<< R_highdphi_nb1_mc->GetBinContent(2,3)<<" = "<<endl;
+  cout<<" WTag : "<<R_highdphi_Wtag_mc->GetBinContent(1)<<" : "<<R_highdphi_Wtag_mc->GetBinContent(2)<<" = "<<endl;
+  cout<<" HTag : "<<R_highdphi_Htag_mc->GetBinContent(1)<<" : "<<R_highdphi_Htag_mc->GetBinContent(2)<<" = "<<endl;
+  
+  R_highdphi_nb0_mc->Divide(R_lowdphi_nb0_mc);
+  R_highdphi_nb1_mc->Divide(R_lowdphi_nb1_mc);
+  R_highdphi_Wtag_mc->Divide(R_lowdphi_Wtag_mc);
+  R_highdphi_Htag_mc->Divide(R_lowdphi_Htag_mc);
+
+  cout<<"/////////// Mc R(low MET) region"<<endl;
+  cout<<R_highdphi_nb0_mc->GetBinError(1,1)<<endl;
+  cout<<R_highdphi_nb0_mc->GetBinError(1,2)<<endl;
+  cout<<R_highdphi_nb0_mc->GetBinError(1,3)<<endl;
+  cout<<R_highdphi_nb1_mc->GetBinError(1,1)<<endl;
+  cout<<R_highdphi_nb1_mc->GetBinError(1,2)<<endl;
+  cout<<R_highdphi_nb1_mc->GetBinError(1,3)<<endl;
+  cout<<R_highdphi_Wtag_mc->GetBinError(1)<<endl;
+  cout<<R_highdphi_Htag_mc->GetBinError(1)<<endl;
+
+  cout<<"/////////// Mc R(high MET) region"<<endl;
+  cout<<R_highdphi_nb0_mc->GetBinError(2,1)<<endl;
+  cout<<R_highdphi_nb0_mc->GetBinError(2,2)<<endl;
+  cout<<R_highdphi_nb0_mc->GetBinError(2,3)<<endl;
+  cout<<R_highdphi_nb1_mc->GetBinError(2,1)<<endl;
+  cout<<R_highdphi_nb1_mc->GetBinError(2,2)<<endl;
+  cout<<R_highdphi_nb1_mc->GetBinError(2,3)<<endl;
+  cout<<R_highdphi_Wtag_mc->GetBinError(2)<<endl;
+  cout<<R_highdphi_Htag_mc->GetBinError(2)<<endl;
+
+  cout<<"/////////// R = high dphi region/low dphi region : "<<endl;
+  cout<<" 0b 2-4 : "<<R_highdphi_nb0_mc->GetBinContent(1,1)<<" :  "<< R_highdphi_nb0_mc->GetBinContent(2,1)<<" = "<<R_highdphi_nb0_mc->GetBinContent(2,1)/R_highdphi_nb0_mc->GetBinContent(1,1)<<endl;
+  cout<<" 0b 5-6 : "<<R_highdphi_nb0_mc->GetBinContent(1,2)<<" : "<< R_highdphi_nb0_mc->GetBinContent(2,2)<<" = "<<R_highdphi_nb0_mc->GetBinContent(2,2)/R_highdphi_nb0_mc->GetBinContent(1,2)<<endl;
+  cout<<" 0b >7 : "<<R_highdphi_nb0_mc->GetBinContent(1,3)<<" :  "<< R_highdphi_nb0_mc->GetBinContent(2,3)<<" = "<<R_highdphi_nb0_mc->GetBinContent(2,3)/R_highdphi_nb0_mc->GetBinContent(1,3)<<endl;
+  cout<<" 1b 2-4 : "<<R_highdphi_nb1_mc->GetBinContent(1,1)<<" :  "<< R_highdphi_nb1_mc->GetBinContent(2,1)<<" = "<<R_highdphi_nb1_mc->GetBinContent(2,1)/R_highdphi_nb1_mc->GetBinContent(1,1)<<endl;
+  cout<<" 1b 5-6 : "<<R_highdphi_nb1_mc->GetBinContent(1,2)<<" :  "<< R_highdphi_nb1_mc->GetBinContent(2,2)<<" = "<<R_highdphi_nb1_mc->GetBinContent(2,2)/R_highdphi_nb1_mc->GetBinContent(1,2)<<endl;
+  cout<<" 1b >7 : "<<R_highdphi_nb1_mc->GetBinContent(1,3)<<" :  "<< R_highdphi_nb1_mc->GetBinContent(2,3)<<" = "<<R_highdphi_nb1_mc->GetBinContent(2,3)/R_highdphi_nb1_mc->GetBinContent(1,3)<<endl;
+  cout<<" WTag : "<<R_highdphi_Wtag_mc->GetBinContent(1)<<" : "<<R_highdphi_Wtag_mc->GetBinContent(2)<<" = "<<R_highdphi_Wtag_mc->GetBinContent(2)/R_highdphi_Wtag_mc->GetBinContent(1)<<endl;
+  cout<<" HTag : "<<R_highdphi_Htag_mc->GetBinContent(1)<<" : "<<R_highdphi_Htag_mc->GetBinContent(2)<<" = "<<R_highdphi_Htag_mc->GetBinContent(2)/R_highdphi_Htag_mc->GetBinContent(1)<<endl;
+
+
+  for(int i=1;i<46;i++)
+    {
+      if(i==1) {fr->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(1,1)); fr->SetBinError(i+1,R_highdphi_nb0_mc->GetBinError(1,1));}
+      if(i>1 && i<=7) {fr->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(2,1)*R_highdphi_nb0_mc->GetBinContent(1,1)/R_highdphi_nb0_mc->GetBinContent(1,1)); fr->SetBinError(i+1,pow(pow(R_highdphi_nb0_mc->GetBinContent(2,1)*R_highdphi_nb0_mc->GetBinError(1,1),2)+pow(R_highdphi_nb0_mc->GetBinContent(1,1)*R_highdphi_nb0_mc->GetBinError(2,1),2),0.5));}
+      if(i==8) {fr->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(1,2)); fr->SetBinError(i+1,R_highdphi_nb0_mc->GetBinError(1,2)); }
+      if(i>8 && i<=13) {fr->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(2,2)*R_highdphi_nb0_mc->GetBinContent(1,2)/R_highdphi_nb0_mc->GetBinContent(1,2)); fr->SetBinError(i+1,pow(pow(R_highdphi_nb0_mc->GetBinContent(2,2)*R_highdphi_nb0_mc->GetBinError(1,2),2)+pow(R_highdphi_nb0_mc->GetBinContent(1,2)*R_highdphi_nb0_mc->GetBinError(2,2),2),0.5));}
+      if(i==14) {fr->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(1,3)); fr->SetBinError(i+1,R_highdphi_nb0_mc->GetBinError(1,3));}
+      if(i>14 && i<=18) {fr->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(2,3)*R_highdphi_nb0_mc->GetBinContent(1,3)/R_highdphi_nb0_mc->GetBinContent(1,3)); fr->SetBinError(i+1,pow(pow(R_highdphi_nb0_mc->GetBinContent(2,3)*R_highdphi_nb0_mc->GetBinError(1,3),2)+pow(R_highdphi_nb0_mc->GetBinContent(1,3)*R_highdphi_nb0_mc->GetBinError(2,3),2),0.5));}
+
+      if(i==19) {fr->SetBinContent(i+1,R_highdphi_nb1_mc->GetBinContent(1,1)); fr->SetBinError(i+1,R_highdphi_nb1_mc->GetBinError(1,1));}
+      if(i>19 && i<=23) {fr->SetBinContent(i+1,R_highdphi_nb1_mc->GetBinContent(2,1)*R_highdphi_nb1_mc->GetBinContent(1,1)/R_highdphi_nb1_mc->GetBinContent(1,1)); fr->SetBinError(i+1,pow(pow(R_highdphi_nb1_mc->GetBinContent(2,1)*R_highdphi_nb1_mc->GetBinError(1,1),2)+pow(R_highdphi_nb1_mc->GetBinContent(1,1)*R_highdphi_nb1_mc->GetBinError(2,1),2),0.5));}
+      if(i==24) {fr->SetBinContent(i+1,R_highdphi_nb1_mc->GetBinContent(1,2)); fr->SetBinError(i+1,R_highdphi_nb1_mc->GetBinError(1,2)); }
+      if(i>24 && i<=28) {fr->SetBinContent(i+1,R_highdphi_nb1_mc->GetBinContent(2,2)*R_highdphi_nb1_mc->GetBinContent(1,2)/R_highdphi_nb1_mc->GetBinContent(1,2)); fr->SetBinError(i+1,pow(pow(R_highdphi_nb1_mc->GetBinContent(2,2)*R_highdphi_nb1_mc->GetBinError(1,2),2)+pow(R_highdphi_nb1_mc->GetBinContent(1,2)*R_highdphi_nb1_mc->GetBinError(2,2),2),0.5));}
+      if(i==29) {fr->SetBinContent(i+1,R_highdphi_nb1_mc->GetBinContent(1,3)); fr->SetBinError(i+1,R_highdphi_nb1_mc->GetBinError(1,3));}
+      if(i>29 && i<=33) {fr->SetBinContent(i+1,R_highdphi_nb1_mc->GetBinContent(2,3)*R_highdphi_nb1_mc->GetBinContent(1,3)/R_highdphi_nb1_mc->GetBinContent(1,3)); fr->SetBinError(i+1,pow(pow(R_highdphi_nb1_mc->GetBinContent(2,3)*R_highdphi_nb1_mc->GetBinError(1,3),2)+pow(R_highdphi_nb1_mc->GetBinContent(1,3)*R_highdphi_nb1_mc->GetBinError(2,3),2),0.5));}
+
+      if(i==34) {fr->SetBinContent(i+1,R_highdphi_Wtag_mc->GetBinContent(1)); fr->SetBinError(i+1,R_highdphi_Wtag_mc->GetBinError(1));}
+      if(i>34 && i<=39) {fr->SetBinContent(i+1,R_highdphi_Wtag_mc->GetBinContent(2)*R_highdphi_Wtag_mc->GetBinContent(1)/R_highdphi_Wtag_mc->GetBinContent(1)); fr->SetBinError(i+1, pow(pow(R_highdphi_Wtag_mc->GetBinContent(2)*R_highdphi_Wtag_mc->GetBinError(1),2)+pow(R_highdphi_Wtag_mc->GetBinContent(1)*R_highdphi_Wtag_mc->GetBinError(2),2),0.5));}
+      if(i==40)	{fr->SetBinContent(i+1,R_highdphi_Htag_mc->GetBinContent(1)); fr->SetBinError(i+1,R_highdphi_Htag_mc->GetBinError(1));}
+      if(i>40 && i<=45)	{fr->SetBinContent(i+1,R_highdphi_Htag_mc->GetBinContent(2)*R_highdphi_Htag_mc->GetBinContent(1)/R_highdphi_Htag_mc->GetBinContent(1)); fr->SetBinError(i+1, pow(pow(R_highdphi_Htag_mc->GetBinContent(2)*R_highdphi_Htag_mc->GetBinError(1),2)+pow(R_highdphi_Htag_mc->GetBinContent(1)*R_highdphi_Htag_mc->GetBinError(2),2),0.5));}
+    }
+  /*     
+  for(int i=1;i<46;i++)                                                                                                                                                                     
+    cout<<i<<" : "<<fr->GetBinContent(i)<<" * "<<CR->GetBinContent(i)<<" = "<<fr->GetBinContent(i)*CR->GetBinContent(i)<<" , SR = "<<SR->GetBinContent(i)<<" , ratio = "<<SR->GetBinContent(i)/(fr->GetBinContent(i)*CR->GetBinContent(i))<<endl;
+  */  
+  TCanvas *c1;
+
+  if(ExpvsPred){
+  
+    gStyle->SetOptStat(0);
+    c1 = new TCanvas("stackhist","stackhist",800,600);
+    //int xmin=1, xmax=46;
+    double ymin=0 , ymax=2, ymin_=0.001 , ymax_=100000000;
+    TString varname1=varname+"_AB";
+    TString varname2=varname+"_CD";
+  
+    
+    if(SRvsCR)  Multi_mc = TFile::Open("rootoutput/Kvalid_Wtag/GJetsQCD_new_v18.root","READ");
+    else Multi_mc = TFile::Open("rootoutput/Kvalid_highMET/GJetsQCD_new_v18.root","READ");
+
+    TH1D *pred_mc=(TH1D*)Multi_mc->FindObjectAny(varname1);
+    SR=(TH1D*)Multi_mc->FindObjectAny(varname2);
+    SR->Rebin(rebin);
+    pred_mc->Rebin(rebin);
+    /*
+    TH1D *pred_mc = new TH1D("pred_mc","(RxK) x N(MC:SR)",52,0,52);
+    for(int i=xmin;i<xmax;i++)
+      { if(SRvsCR) pred_mc->SetBinContent(i+1,CR->GetBinContent(i+1));
+	else pred_mc->SetBinContent(i+1,fr->GetBinContent(i+1)*CR->GetBinContent(i+1));
+      }
+    */
+    TPad *pad1 = new TPad("pad1","pad1",0,0,1,1);
+    pad1->SetBottomMargin(0);
+    pad1->SetBottomMargin(0.3);
+    pad1->Draw();pad1->SetGridx();
+    pad1->cd();
+    pad1->SetLogy();
+    SR->GetXaxis()->SetRangeUser(xmin,xmax);
+    pred_mc->GetYaxis()->SetLabelSize(0.07);
+    SR->GetYaxis()->SetTitle("Entries");
+    SR->GetYaxis()->SetTitleSize(0.04);
+    SR->GetYaxis()->SetTitleOffset(0.92);
+    SR->GetYaxis()->SetRangeUser(ymin_,ymax_);
+    
+    pred_mc->SetMarkerStyle(20);
+    pred_mc->SetMarkerSize(0.7);
+    pred_mc->SetMarkerColor(kRed);
+    pred_mc->SetLineColor(kRed);
+    SR->SetMarkerStyle(20);
+    SR->SetMarkerSize(0.7);
+    SR->SetMarkerColor(kBlue);
+    SR->SetLineColor(kBlue);
+    SR->SetTitle(0);
+    SR->Draw();
+    pred_mc->Draw("e same");
+
+    TLegend *legend1 = new TLegend(0.6,0.78,0.9,0.9);
+    if(SRvsCR){
+      legend1->AddEntry(SR,"SR","lp");
+      legend1->AddEntry(pred_mc,"CR","lp");
+    }
+    else{
+      legend1->AddEntry(SR,"Expected","lp");
+      legend1->AddEntry(pred_mc,"Predicted","lp");
+
+    }
+    legend1->SetTextSize(0.04);
+    legend1->Draw();
+    
+    TH1D *h3 = (TH1D*)SR->Clone("h3");
+    TH1D *h4 = (TH1D*)pred_mc->Clone("h4");
+    TPad *pad2 = new TPad("pad2","pad2",0,0.0,1,0.3);
+    pad2->Draw();
+    pad2->SetTopMargin(0);
+    pad2->SetBottomMargin(0.3);
+    pad2->cd();
+    pad2->SetGrid(0);
+    pad1->SetGridy(0);
+    h3->Sumw2();
+    h3->SetStats(0);      // No statistics on lower plot                                                                                                                    
+    h3->SetTitle(0);
+    h3->Divide(h4);
+    h3->SetMarkerColor(kBlack);
+    h3->SetLineColor(kBlack);
+    h3->GetXaxis()->SetTitle("Bin no.");
+    h3->GetXaxis()->SetTitleOffset(0.8);
+    h3->GetXaxis()->SetTitleSize(0.18);
+    h3->GetXaxis()->SetLabelSize(0.12);
+    if(SRvsCR) h3->GetYaxis()->SetTitle("SR/CR");
+    else h3->GetYaxis()->SetTitle("Exp/Pred");
+    h3->GetYaxis()->SetTitleSize(0.15);
+    h3->GetYaxis()->SetTitleOffset(0.28);
+    h3->GetYaxis()->SetLabelSize(0.1); 
+    h3->GetYaxis()->SetNdivisions(5);
+    h3->SetFillColor(kGray);
+    h3->SetMinimum(ymin);
+    h3->SetMaximum(ymax);
+    h3->Draw("ep");
+    TLine *line= new TLine(xmin,1,xmax,1);
+    line->SetLineColor(2);
+    line->SetLineStyle(1);
+    line->SetLineWidth(1);
+    line->Draw();
+
+
+  }
+
+
+  if(Kvalid && !ExpvsPred)
+    {
+      TFile *f2=new TFile("rootoutput/K_MC_0pho.root","recreate");
+      //      TFile *f2=new TFile("K_MC_0pho_wt2.root","recreate");
+      f2->cd();
+
+      TLatex textOnTop,textOnTop2,intLumiE;
+      pdf="pdf/Multi_Kvalid_dataMC.pdf";
+      png="png/Multi_Kvalid_dataMC.png";
+	    
+      //      R_highdphi_nb0_mc->GetBinContent(2,1)/R_highdphi_nb0_mc->GetBinContent(1,1);
+    TH1D *K_data = new TH1D("K_data","K factors in data",8,1,9);
+    TH1D *K_mc = new TH1D("K_mc","K factors in mc",8,1,9);
+    for(int i=0;i<3;i++)
+      {
+	K_data->SetBinContent(i+1,R_highdphi_nb0_data->GetBinContent(2,i+1)/R_highdphi_nb0_data->GetBinContent(1,i+1));
+        K_mc->SetBinContent(i+1,R_highdphi_nb0_mc->GetBinContent(2,i+1)/R_highdphi_nb0_mc->GetBinContent(1,i+1));
+	cout<<i+1<<" : "<<R_highdphi_nb1_data->GetBinContent(2,i+1)<<" : "<<R_highdphi_nb1_data->GetBinContent(1,i+1)<<endl;
+        K_data->SetBinContent(i+4,R_highdphi_nb1_data->GetBinContent(2,i+1)/R_highdphi_nb1_data->GetBinContent(1,i+1));
+        K_mc->SetBinContent(i+4,R_highdphi_nb1_mc->GetBinContent(2,i+1)/R_highdphi_nb1_mc->GetBinContent(1,i+1));
+      }
+    for(int i=0;i<3;i++)
+      {
+        K_data->SetBinError(i+1,K_data->GetBinContent(i)*pow(pow(R_highdphi_nb0_data->GetBinError(2,i+1)/R_highdphi_nb0_data->GetBinContent(2,i+1),2)+pow(R_highdphi_nb0_data->GetBinError(1,i+1)/R_highdphi_nb0_data->GetBinContent(1,i+1),2),0.5));
+        K_mc->SetBinError(i+1,K_mc->GetBinContent(i)*pow(pow(R_highdphi_nb0_mc->GetBinError(2,i+1)/R_highdphi_nb0_mc->GetBinContent(2,i+1),2)+pow(R_highdphi_nb0_mc->GetBinError(1,i+1)/R_highdphi_nb0_mc->GetBinContent(1,i+1),2),0.5));
+	K_data->SetBinError(i+4,K_data->GetBinContent(i)*pow(pow(R_highdphi_nb1_data->GetBinError(2,i+1)/R_highdphi_nb1_data->GetBinContent(2,i+1),2)+pow(R_highdphi_nb1_data->GetBinError(1,i+1)/R_highdphi_nb1_data->GetBinContent(1,i+1),2),0.5));
+        K_mc->SetBinError(i+4,K_mc->GetBinContent(i)*pow(pow(R_highdphi_nb1_mc->GetBinError(2,i+1)/R_highdphi_nb1_mc->GetBinContent(2,i+1),2)+pow(R_highdphi_nb1_mc->GetBinError(1,i+1)/R_highdphi_nb1_mc->GetBinContent(1,i+1),2),0.5));
+
+
+      }
+
+    K_data->SetBinContent(7,R_highdphi_Wtag_data->GetBinContent(2)/R_highdphi_Wtag_data->GetBinContent(1));
+    K_data->SetBinContent(8,R_highdphi_Htag_data->GetBinContent(2)/R_highdphi_Htag_data->GetBinContent(1));
+    K_mc->SetBinContent(7,R_highdphi_Wtag_mc->GetBinContent(2)/R_highdphi_Wtag_mc->GetBinContent(1));
+    K_mc->SetBinContent(8,R_highdphi_Htag_mc->GetBinContent(2)/R_highdphi_Htag_mc->GetBinContent(1));
+
+    int xmin=1, xmax=9;
+    double ymin=0 , ymax=1.99, ymin_=0.1 , ymax_=3;
+    //    TCanvas *c1;
+    gStyle->SetOptStat(0);
+    c1 = new TCanvas("stackhist","stackhist",1600,900);
+    TPad *pad1 = new TPad("pad1","pad1",0,0,1,1);
+    pad1->SetBottomMargin(0);
+    pad1->SetBottomMargin(0.355);
+    pad1->Draw();pad1->SetGridx(0); pad1->SetGridy(0);
+    pad1->cd();
+    //    pad1->SetLogy();
+    K_data->GetXaxis()->SetRangeUser(xmin,xmax);
+    K_data->GetYaxis()->SetLabelSize(0.045);
+    K_data->GetYaxis()->SetTitle("#kappa(r)");
+    K_data->GetYaxis()->SetTitleSize(0.056);
+    K_data->GetYaxis()->SetTitleOffset(0.81);
+    K_data->GetYaxis()->SetRangeUser(ymin_,ymax_);
+    K_mc->SetMarkerStyle(20);
+    K_mc->SetMarkerSize(0.7);
+    K_mc->SetMarkerColor(kRed);
+    K_mc->SetLineColor(kRed);
+    K_data->SetMarkerStyle(20);
+    K_data->SetMarkerSize(0.7);
+    K_data->SetMarkerColor(kBlue);
+    K_data->SetLineColor(kBlue);
+    K_data->SetTitle(0);
+    K_data->Draw("e");
+    K_mc->Draw("e same");
+    K_data->Print("all");
+    K_mc->Print("all");
+    K_data->GetXaxis()->SetTickLength(0);
+    TString temp2;
+    for(int i=1;i<=K_data->GetNbinsX();i++){
+      temp2 = to_string(i-1);
+      K_data->GetXaxis()->SetBinLabel(i,temp2);
+    }
+
+
+  double yset=(ymax_+ymin_)/2.2;
+  cout<<"yset = "<<yset<<endl;
+  TArrow *arrow0 = new TArrow( 1, yset, 2, yset,0.01,"<|>");
+  TArrow *arrow1 = new TArrow( 2, yset, 3, yset,0.01,"<|>");
+  TArrow *arrow2 = new TArrow( 3, yset, 4, yset,0.01,"<|>");
+  TArrow *arrow3 = new TArrow( 4, yset, 5, yset,0.01,"<|>");
+  TArrow *arrow4 = new TArrow( 5, yset, 6, yset,0.01,"<|>");
+  TArrow *arrow5 = new TArrow( 6, yset, 7, yset,0.01,"<|>");
+  TArrow *arrow6 = new TArrow( 7,yset, 8,yset,0.01,"<|>");
+  TArrow *arrow7 = new TArrow( 8,yset, 9,yset,0.01,"<|>");
+  TArrow *arrow11 = new TArrow( 0,yset*1.5, 6,yset*1.5,0.01,"<|>");
+  TArrow *arrow12 = new TArrow( 6,yset*1.5, 8,yset*1.5,0.01,"<|>");
+  arrow1->Draw(); arrow2->Draw(); arrow3->Draw();
+  arrow4->Draw(); arrow0->Draw();
+  arrow5->Draw(); arrow6->Draw();
+  arrow7->Draw(); //  arrow11->Draw(); arrow12->Draw();
+
+  TLine *line1V7=new TLine( 1,ymin,  1,1.2*yset);
+  TLine *line2V7=new TLine( 2,ymin,  2,1.2*yset);
+  TLine *line3V7=new TLine( 3,ymin,  3,1.2*yset);
+  TLine *line4V7=new TLine( 4,ymin,  4,1.2*yset);
+  TLine *line5V7=new TLine( 5,ymin,  5,1.2*yset);
+  TLine *line6V7=new TLine( 6,ymin,  6,1.2*yset);
+  TLine *line7V7=new TLine( 7,ymin,  7,1.2*yset);
+  TLine *line8V7=new TLine( 8,ymin,  8,1.2*yset);
+  line1V7->Draw();  line2V7->Draw();  line3V7->Draw();
+  line4V7->Draw();  line5V7->Draw(); line6V7->Draw();
+  line7V7->Draw();  line8V7->Draw();
+
+  yset=1.05*(ymax_+ymin_)/2.1;
+  cout<<"yset = "<<yset<<endl;
+  TLatex Tl,T2;
+  Tl.SetTextSize(0.04);
+  T2.SetTextSize(0.04);
+  Tl.DrawLatex(1.325,yset,"N^{ 0}_{ 2-4}");
+  Tl.DrawLatex(2.325,yset,"N^{ 0}_{ 5-6}");
+  Tl.DrawLatex(3.3,yset,"N^{ 0}_{ #geq7}");
+  Tl.DrawLatex(4.3,yset,"N^{ #geq1}_{ 2-4}");
+  Tl.DrawLatex(5.3,yset,"N^{ #geq1}_{ 5-6}");
+  Tl.DrawLatex(6.3,yset,"N^{ #geq1}_{ #geq7}");
+  Tl.DrawLatex(7.2,yset,"V tag");
+  Tl.DrawLatex(8.2,yset,"H tag");
+  //  T2.DrawLatex(2.5,yset*1.5,"SP region");
+  //  T2.DrawLatex(6.5,yset*1.5,"EW region");
+    
+  TLegend *legend1 = new TLegend(0.65,0.78,0.89,0.89);
+  legend1->SetBorderSize(0);
+  //  legend1->AddEntry(K_data,"K(N_{jets}, N_{b-tags}, EW) data","lpe");
+  //  legend1->AddEntry(K_mc,"K(N_{jets}, N_{b-tags}, EW) MC","lpe");
+  legend1->AddEntry(K_data,"Data","lpe");
+  legend1->AddEntry(K_mc,"Simulation","lpe");
+  legend1->SetTextSize(0.045);
+  legend1->Draw();
+  textOnTop2.SetTextSize(0.04);
+  textOnTop.SetTextSize(0.045);
+  intLumiE.SetTextSize(0.04);
+  //  textOnTop.DrawLatexNDC(0.1,0.91,"CMS #it{#bf{Supplementary}}");
+  textOnTop.DrawLatexNDC(0.1,0.915,"CMS");
+  textOnTop2.DrawLatexNDC(0.15,0.915," #it{#bf{}}");
+  intLumiE.DrawLatexNDC(0.73,0.92,"#bf{137 fb^{-1} (13 TeV)}");
+  
+  TH1D *h3 = (TH1D*)K_data->Clone("h3");
+  TH1D *h4 = (TH1D*)K_mc->Clone("h4");
+  TPad *pad2 = new TPad("pad2","pad2",0,0.0,1,0.35);
+  pad2->Draw();
+  pad2->SetTopMargin(0);
+  pad2->SetBottomMargin(0.3);
+  pad2->cd();
+  pad2->SetGrid(0);
+  pad2->SetGridy(0);
+  h3->Sumw2();
+  h3->SetStats(0);      // No statistics on lower plot                                                                                                                                        h3->SetTitle(0);
+  h3->Divide(h4);
+  h3->SetMarkerColor(kBlack);
+  h3->SetMarkerSize(0.9);
+
+  h3->SetLineColor(kBlack);
+  h3->GetXaxis()->SetTitle("Bin index");
+  h3->GetXaxis()->SetTitleOffset(0.85);
+  h3->GetXaxis()->SetTitleSize(0.16);
+  h3->GetXaxis()->SetLabelSize(0.12);
+  h3->GetYaxis()->SetTitle("#frac{Data}{Simulation}");
+  h3->GetYaxis()->SetNdivisions(5);
+  //  h3->GetYaxis()->SetRangeUser(0,2.5);
+  h3->GetYaxis()->SetTitleOffset(0.36);
+  h3->GetYaxis()->SetTitleSize(0.125);
+  h3->GetYaxis()->SetLabelSize(0.125);
+  h3->GetYaxis()->CenterTitle();
+
+  //  h3->SetFillColor(kWhite);
+  h3->SetMinimum(ymin);
+  h3->SetMaximum(ymax);
+  h3->SetFillColor(10);
+  h3->SetBarWidth(0.4);
+  h3->SetBarOffset(0.1);
+  h3->Draw("hist");
+  K_mc->Write("K_MC");
+  TLine *line= new TLine(xmin,1,xmax,1);
+  line->SetLineColor(2);
+  line->SetLineStyle(1);
+  line->SetLineWidth(1);
+  line->Draw();
+  h3->Print("all");
+  TH1D *h5 = (TH1D*)h3->Clone("h5");
+  TH1D *h6 = (TH1D*)h3->Clone("h6");
+  double x[8],y[8], y1[8],y2[8];
+  for(int i=0;i<=9;i++)
+    {
+      //      h5->SetBinContent(i,1-(h3->GetBinContent(i)));
+      if(i!=4) h5->SetBinContent(i,1);
+      else h6->SetBinContent(i,1);
+    }
+  //  h5->SetFillStyle(3001);
+  h5->SetFillColor(38);
+  h5->SetFillColorAlpha(kBlue, 0.35);
+  h5->SetBarWidth(0.4);
+  h5->SetBarOffset(0.1);
+  h5->Draw("hist same");
+
+  h6->SetFillColor(10);
+  h6->SetBarWidth(0.4);
+  h6->SetBarOffset(0.1);
+  h6->Draw("hist same");
+
+  h5->Print("all");
+  h3->GetXaxis()->SetTickLength(0);
+  h3->GetXaxis()->SetLabelSize(0.06);
+
+  line= new TLine(xmin,1.5,xmax,1.5);
+  line->SetLineColor(kBlack);
+  line->SetLineStyle(3);
+  line->SetLineWidth(1);
+  line->Draw();
+
+  line= new TLine(xmin,0.5,xmax,0.5);
+  line->SetLineColor(kBlack);
+  line->SetLineStyle(3);
+  line->SetLineWidth(1);
+  line->Draw();
+ 
+  for(int i=1;i<=K_mc->GetNbinsX();i++){
+    temp2 = to_string(i);
+    h3->GetXaxis()->SetBinLabel(i,temp2);
+  }
+  h3->GetXaxis()->SetLabelSize(0.20);
+  h3->GetXaxis()->SetLabelOffset(0.01);
+  h3->GetXaxis()->SetTickLength(0.05);
+  h3->GetXaxis()->SetTitleOffset(0.86);
+  h3->GetXaxis()->SetTitleSize(0.14);
+
+  TLine *line1V7_=new TLine( 1,ymin,  1,ymax);
+  TLine *line2V7_=new TLine( 2,ymin,  2,ymax);
+  TLine *line3V7_=new TLine( 3,ymin,  3,ymax);
+  TLine *line4V7_=new TLine( 4,ymin,  4,ymax);
+  TLine *line5V7_=new TLine( 5,ymin,  5,ymax);
+  TLine *line6V7_=new TLine( 6,ymin,  6,ymax);
+  TLine *line7V7_=new TLine( 7,ymin,  7,ymax);
+  TLine *line8V7_=new TLine( 8,ymin,  8,ymax);
+  line1V7_->Draw();  line2V7_->Draw();  line3V7_->Draw();
+  line4V7_->Draw();  line5V7_->Draw(); line6V7_->Draw();
+  line7V7_->Draw();  line8V7_->Draw();
+  c1->SaveAs(png);
+  c1->SetCanvasSize(2600,1600);
+  c1->SaveAs(pdf);
+
+  //  k_valid = (TH1D*)h5->Clone("k_valid");
+  for(int i=1;i<=46;i++)
+    {
+      if(i<8) k_valid->SetBinContent(i+1,h5->GetBinContent(1));
+      else if(i>=8 && i<14) k_valid->SetBinContent(i+1,h5->GetBinContent(2));
+      else if(i>=14 && i<19) k_valid->SetBinContent(i+1,h5->GetBinContent(3));
+      else if(i>=19 && i<24) k_valid->SetBinContent(i+1,h5->GetBinContent(4));
+      else if(i>=24 && i<29) k_valid->SetBinContent(i+1,h5->GetBinContent(5));
+      else if(i>=29 && i<34) k_valid->SetBinContent(i+1,h5->GetBinContent(6));
+      else if(i>=34 && i<40) k_valid->SetBinContent(i+1,h5->GetBinContent(7));
+      else if(i>=40 && i<46) k_valid->SetBinContent(i+1,h5->GetBinContent(8));
+    }
+
+  
+  JERC = (TH1D*)k_valid->Clone("JERC");
+  
+    }
+
+  TFile *f1=new TFile("factors/K_validation.root","recreate");
+  
+  f1->cd();
+  fr->Write();
+  R_highdphi_nb0_mc->Write("K_nb0_mc");
+  R_highdphi_nb1_mc->Write("K_nb1_mc");
+  R_highdphi_Wtag_mc->Write("K_Wtag_mc");
+  R_highdphi_Htag_mc->Write("K_Htag_mc");
+  R_highdphi_nb0_data->Write("K_nb0_data");
+  R_highdphi_nb1_data->Write("K_nb1_data");
+  R_highdphi_Wtag_data->Write("K_Wtag_data");
+  R_highdphi_Htag_data->Write("K_Htag_data");
+  k_valid->Write();
+  JERC->Write();
+  //  pred_mc->Write("pred_mc");
+  
+
+  
+}
+ 
+  
+ 
+
+

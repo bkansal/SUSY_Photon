@@ -1,0 +1,295 @@
+//void plotoverlay(TString varName="nJets",TString year="full_Run2", int rebin=1, TString path="../rootfiles_MCcutflow_MET200/")
+void plotoverlay(TString varName="nJets",TString year="full_Run2", int rebin=1, TString path="rootoutput/rootfiles_MCcutflow_MET300/")
+//void plotoverlay(TString varName="nJets",TString year="full_Run2", int rebin=1, TString path="rootoutput/nphotons/")
+{
+  //  TString path="rootfiles_MCcutflow_MET300_withoutgenpho/";
+
+  const int nfiles=10,nBG=6;
+  TFile *f[nfiles];
+  TH1D *h_MET[14],*h_MET2[14][nfiles];
+  TString fname_[nfiles], name[nfiles];
+  TCanvas *c1[nfiles];
+  gStyle->SetOptStat(0);
+
+  if(year=="full_Run2")
+    {
+      //      nfiles=8;
+      fname_[0]=path+"TTGJets_v18.root";
+      name[0]="TTGJets";
+      f[0] = new TFile(fname_[0]);
+      fname_[1]=path+"TTJetsHT_v18.root";
+      name[1]="TTJets";
+      f[1] = new TFile(fname_[1]);
+      fname_[2]=path+"ZGZJ_NuNuG_v18.root";
+      name[2]="ZGZJ_NuNuG";
+      f[2] = new TFile(fname_[2]);
+      fname_[3]=path+"WGJetsToLNuG_v18.root";
+      name[3]="WGJets";
+      f[3] = new TFile(fname_[3]);
+      fname_[4]=path+"WJetsToLNu_v18.root";
+      name[4]="WJets";
+      f[4] = new TFile(fname_[4]);
+      fname_[5]=path+"GJetsQCD_new_v18.root";
+      name[5]="GJetsQCD";
+      f[5] = new TFile(fname_[5]);
+      path="rootoutput/nphotons_MET300/";
+      fname_[6]=path+"T5bbbbZg_2200_200_FastSim_v18.root";
+      name[6]="T5bbbbZg_2200_200";
+      f[6] = new TFile(fname_[6]);
+      fname_[7]=path+"T5bbbbZg_2200_2100_FastSim_v18.root";
+      name[7]="T5bbbbZg_2200_1800";
+      f[7] = new TFile(fname_[7]);            
+
+      fname_[8]=path+"TChiWg_0_1000_FastSim_v18.root";
+      name[8]="TChiWg_0_800";
+      f[8] = new TFile(fname_[8]);
+      fname_[9]=path+"TChiWg_0_1200_FastSim_v18.root";
+      name[9]="TChiWg_0_1200";
+      f[9] = new TFile(fname_[9]);
+
+      /*
+      fname_[8]=path+"TChiNg_0_800_FastSim_v17.root";
+      name[8]="TChiNg_0_800";
+      f[8] = new TFile(fname_[8]);
+      fname_[9]=path+"TChiNg_0_1200_FastSim_v17.root";
+      name[9]="TChiNg_0_1200";
+      f[9] = new TFile(fname_[9]);
+      */
+    }
+  else
+    {
+      fname_[0]=path+"TTGJets_"+year+"_v18.root";
+      name[0]="TTGJets_"+year;
+      f[0] = new TFile(fname_[0]);
+      fname_[1]=path+"TTJetsHT_"+year+"_v18.root";
+      name[1]="TTJets_"+year;
+      f[1] = new TFile(fname_[1]);
+      fname_[2]=path+"ZGZJ_NuNuG_"+year+"_v18.root";
+      name[2]="ZGZJ_NuNuG_"+year;
+      f[2] = new TFile(fname_[2]);
+      fname_[3]=path+"WGJetsToLNuG_"+year+"_v18.root";
+      name[2]="WGJets_"+year;
+      f[3] = new TFile(fname_[3]);
+      fname_[4]=path+"WJetsToLNu_"+year+"_v18.root";
+      name[2]="WGJets_"+year;
+      f[4] = new TFile(fname_[4]);
+      fname_[5]=path+"GJetsQCD_"+year+"_v18.root";
+      name[2]="GJetsQCD_"+year;
+      f[5] = new TFile(fname_[5]);
+      /*
+      fname_=path+"T5bbbbZg_2200_200_FastSim_"+year+"_v18.root";
+      f[6] = new TFile(fname_);
+      fname_=path+""+year+"_MC.root";
+      f[7] = new TFile(fname_);  
+      */    
+    }
+  TString varName_nocut=varName + "_nocut";
+  TString varName_aftertrg=varName + "_aftertrg";
+  TString varName_METfilters=varName + "_METfilters";
+  TString varName_madHT=varName + "_madHT";
+  TString varName_genpho=varName + "_genpho";
+  TString varName_ISR=varName + "_ISR";
+  TString varName_phopt=varName + "_phopt";
+  TString varName_nolep=varName + "_nolep";
+  TString varName_noisotrack=varName + "_noisotrack";
+  TString varName_MET200=varName + "_MET200";
+  TString varName_nj2=varName + "_nj2";
+  TString varName_phojet=varName + "_phojet";
+  TString varName_ST300=varName + "_ST300";
+  TString varName_dphi=varName + "_dphi";
+  TString varName_EW=varName + "_EW";
+  TString varName_SP=varName + "_SP";
+
+  
+  //TString varName_[14]={varName_nocut,varName_aftertrg,varName_METfilters,varName_madHT,varName_genpho,varName_ISR,varName_phopt,varName_nolep,varName_noisotrack,varName_MET200,varName_nj2,varName_phojet,varName_ST300,varName_dphi};
+  if(varName=="METvBin")
+    {
+      TString varName_[11]={varName_nocut,varName_genpho,varName_ST300,varName_aftertrg,varName_METfilters,varName_madHT,varName_nolep,varName_noisotrack,varName_ISR,varName_phojet,varName_dphi};
+
+      int nhist=sizeof(varName_)/sizeof(varName_[0]);
+      for(int i=0;i<nhist;i++)
+	{
+              for(int j=0;j<nfiles;j++)
+                {
+		  cout<<name[j]<<" : "<<varName_[i]<<endl;
+                  h_MET2[i][j]=(TH1D*)f[j]->Get(varName_[i]);
+		  h_MET2[i][j]->Draw();
+                }
+	}
+
+      cout<<"=========== cutflow in MET variable binning for background ===================="<<endl;
+      for(int i=1; i<8; i++){
+	cout<<"\\multirow{2}{*}{"<<h_MET2[2][0]->GetXaxis()->GetBinLowEdge(i)<<"$<$ MET $<$ "<<h_MET2[2][0]->GetXaxis()->GetBinLowEdge(i+1)<<"}"<<endl;
+	cout<<" &  After baseline & "<< h_MET2[2][0]->GetBinContent(i)<<" & "<< h_MET2[2][1]->GetBinContent(i)<<" & "<< h_MET2[2][2]->GetBinContent(i)<<" & "<< h_MET2[2][3]->GetBinContent(i)<<" & "<< h_MET2[2][4]->GetBinContent(i)<<" & "<< h_MET2[2][5]->GetBinContent(i)<<" \\ "<<endl;
+	cout<<" &  After Trigger eff. & "<< h_MET2[3][0]->GetBinContent(i)<<" & "<< h_MET2[3][1]->GetBinContent(i)<<" & "<< h_MET2[3][2]->GetBinContent(i)<<" & "<< h_MET2[3][3]->GetBinContent(i)<<" & "<< h_MET2[3][4]->GetBinContent(i)<<" & "<< h_MET2[3][5]->GetBinContent(i)<<" \\ "<<endl;
+	cout<<"\\hline"<<endl;
+      }
+
+      cout<<"=========== cutflow in MET variable binning for Signals ===================="<<endl;
+      for(int i=1; i<8; i++){
+        cout<<"\\multirow{2}{*}{"<<h_MET2[2][0]->GetXaxis()->GetBinLowEdge(i)<<"$<$ MET $<$ "<<h_MET2[2][0]->GetXaxis()->GetBinLowEdge(i+1)<<"}"<<endl;
+        cout<<" &  After baseline & "<< h_MET2[2][6]->GetBinContent(i)<<" & "<< h_MET2[2][7]->GetBinContent(i)<<" & "<< h_MET2[2][8]->GetBinContent(i)<<" & "<< h_MET2[2][9]->GetBinContent(i)<<" \\ "<<endl;
+        cout<<" &  After Trigger eff. & "<< h_MET2[3][6]->GetBinContent(i)<<" & "<< h_MET2[3][7]->GetBinContent(i)<<" & "<< h_MET2[3][8]->GetBinContent(i)<<" & "<< h_MET2[3][9]->GetBinContent(i)<<" \\ "<<endl;
+	cout<<"\\hline"<<endl;
+
+      }
+
+    }
+
+  else
+    {
+      TString varName_[13]={varName_nocut,varName_genpho,/*varName_phopt,varName_MET200,varName_nj2,*/varName_ST300,varName_aftertrg,varName_METfilters,varName_madHT,varName_nolep,varName_noisotrack,varName_ISR,varName_phojet,varName_dphi,varName_SP,varName_EW};
+      cout<<"Total no of hist : "<<sizeof(varName_)/sizeof(varName_[0])<<endl;
+      int nhist=sizeof(varName_)/sizeof(varName_[0]);
+      for(int j=0;j<nfiles;j++)
+	{
+	  TLegend *legend = new TLegend(0.69,0.55,0.9,0.9);
+	  legend->SetNColumns(1);
+	  legend->SetBorderSize(1);
+	  c1[j] = new TCanvas(fname_[j],fname_[j],1400,800);
+	  c1[j]->SetLogy();
+	  
+	  for(int i=0;i<nhist;i++)
+	    {
+	      cout<<" Name : "<<varName_[i]<<endl;
+	      h_MET[i]=(TH1D*)f[j]->Get(varName_[i]);
+	      if(i==0) continue;
+	      h_MET[i]->Rebin(rebin);
+	      h_MET[i]->SetLineColor(i-1);
+	      h_MET[i]->GetYaxis()->SetRangeUser(0.1,1000000);
+	      if(varName == "ST" || varName=="BestPhotonPt" || varName=="hadAk8Mass") h_MET[i]->GetYaxis()->SetRangeUser(0.1,10000);
+	      if(j>5) h_MET[i]->GetYaxis()->SetRangeUser(0.001,1000);
+	      if(i==0) h_MET[i]->Draw("hist");
+	      else h_MET[i]->Draw("hist sames");
+	      if(i==1) h_MET[i]->SetLineColor(kBlack);
+              if(i==2) h_MET[i]->SetLineColor(kMagenta-1);
+	      if(i==nhist-1)
+		{
+		  h_MET[i]->SetLineColor(kRed);
+		  h_MET[i]->SetLineWidth(2);
+	    
+		}
+	      TString tmp=varName + "_baseline";
+	      if(i==1){tmp=varName + "_nocut"; legend->AddEntry(h_MET[i],tmp,"lp");}
+	      else if(i==2){tmp=varName + "_baseline"; legend->AddEntry(h_MET[i],tmp,"lp");}
+	      else  legend->AddEntry(h_MET[i],varName_[i],"lp");
+	    }
+	  legend->Draw();
+	  TString pdf,png;
+	  pdf=path+"/pdf/"+varName+"/"+name[j]+".pdf";
+	  png=path+"/pdf/"+varName+"/"+name[j]+".png";
+	  c1[j]->SaveAs(pdf);
+	  c1[j]->SaveAs(png);      
+	}
+
+      cout<<"======= Cutflows for background MC =========="<<endl;
+      
+      for(int i=0;i<nhist;i++)
+	{
+	  for(int j=0;j<nfiles-4;j++)
+	    {
+	      h_MET2[i][j]=(TH1D*)f[j]->Get(varName_[i]);
+	    }
+	}  
+  
+           cout<<" No cut "<<" & "<< h_MET2[0][0]->Integral()<<" & "<< h_MET2[0][1]->Integral()<<" & "<< h_MET2[0][2]->Integral()<<" & "<< h_MET2[0][3]->Integral()<<" & "<< h_MET2[0][4]->Integral()<<" & "<< h_MET2[0][5]->Integral()<<" \\  "<<endl; 
+      cout<<" No cut after stitching samples "<<" & "<< h_MET2[1][0]->Integral()<<" & "<< h_MET2[1][1]->Integral()<<" & "<< h_MET2[1][2]->Integral()<<" & "<< h_MET2[1][3]->Integral()<<" & "<< h_MET2[1][4]->Integral()<<" & "<< h_MET2[1][5]->Integral()<<" \\  "<<endl;
+      /*
+      cout<<" $p_{T}^{\gamma}$ $>$ 100 GeV "<<" & "<< h_MET2[2][0]->Integral()<<" & "<< h_MET2[2][1]->Integral()<<" & "<< h_MET2[2][2]->Integral()<<" & "<< h_MET2[2][3]->Integral()<<" & "<< h_MET2[2][4]->Integral()<<" & "<< h_MET2[2][5]->Integral()<<" \\  "<<endl;                                                                                                                               
+      cout<<" $p_{T}^{miss}$ $>$ 300 GeV "<<" & "<< h_MET2[3][0]->Integral()<<" & "<< h_MET2[3][1]->Integral()<<" & "<< h_MET2[3][2]->Integral()<<" & "<< h_MET2[3][3]->Integral()<<" & "<< h_MET2[3][4]->Integral()<<" & "<< h_MET2[3][5]->Integral()<<" \\  "<<endl;                                                                                                                                 
+      cout<<"  $N_{jets}>2$ "<<" & "<< h_MET2[4][0]->Integral()<<" & "<< h_MET2[4][1]->Integral()<<" & "<< h_MET2[4][2]->Integral()<<" & "<< h_MET2[4][3]->Integral()<<" & "<< h_MET2[4][4]->Integral()<<" & "<< h_MET2[4][5]->Integral()<<" \\  "<<endl;                                                                                                                                  
+      cout<<" ST $>$ 300 GeV "<<" & "<< h_MET2[5][0]->Integral()<<" & "<< h_MET2[5][1]->Integral()<<" & "<< h_MET2[5][2]->Integral()<<" & "<< h_MET2[5][3]->Integral()<<" & "<< h_MET2[5][4]->Integral()<<" & "<< h_MET2[5][5]->Integral()<<" \\  "<<endl;                                                                                                                   
+
+      */
+      cout<<" After baseline "<<" & "<< h_MET2[2][0]->Integral()<<" & "<< h_MET2[2][1]->Integral()<<" & "<< h_MET2[2][2]->Integral()<<" & "<< h_MET2[2][3]->Integral()<<" & "<< h_MET2[2][4]->Integral()<<" & "<< h_MET2[2][5]->Integral()<<" \\  "<<endl;
+      cout<<" Trigger eff. "<<" & "<< h_MET2[3][0]->Integral()<<" & "<< h_MET2[3][1]->Integral()<<" & "<< h_MET2[3][2]->Integral()<<" & "<< h_MET2[3][3]->Integral()<<" & "<< h_MET2[3][4]->Integral()<<" & "<< h_MET2[3][5]->Integral()<<" \\  "<<endl;
+      cout<<" MET filters "<<" & "<< h_MET2[4][0]->Integral()<<" & "<< h_MET2[4][1]->Integral()<<" & "<< h_MET2[4][2]->Integral()<<" & "<< h_MET2[4][3]->Integral()<<" & "<< h_MET2[4][4]->Integral()<<" & "<< h_MET2[4][5]->Integral()<<" \\  "<<endl;
+      cout<<" mad HT for TTJ $\\&$ TTjets"<<" & "<< h_MET2[5][0]->Integral()<<" & "<< h_MET2[5][1]->Integral()<<" & "<< h_MET2[5][2]->Integral()<<" & "<< h_MET2[5][3]->Integral()<<" & "<< h_MET2[5][4]->Integral()<<" & "<< h_MET2[5][5]->Integral()<<" \\  "<<endl;
+      cout<<" Lepton veto "<<" & "<< h_MET2[6][0]->Integral()<<" & "<< h_MET2[6][1]->Integral()<<" & "<< h_MET2[6][2]->Integral()<<" & "<< h_MET2[6][3]->Integral()<<" & "<< h_MET2[6][4]->Integral()<<" & "<< h_MET2[6][5]->Integral()<<" \\  "<<endl;
+       cout<<" iso e/$\\mu$/$\\pi$ track veto "<<" & "<< h_MET2[7][0]->Integral()<<" & "<< h_MET2[7][1]->Integral()<<" & "<< h_MET2[7][2]->Integral()<<" & "<< h_MET2[7][3]->Integral()<<" & "<< h_MET2[7][4]->Integral()<<" & "<< h_MET2[7][5]->Integral()<<" \\  "<<endl;
+       cout<<" ISR  for TTJ $\\&$ TTjets "<<" & "<< h_MET2[8][0]->Integral()<<" & "<< h_MET2[8][1]->Integral()<<" & "<< h_MET2[8][2]->Integral()<<" & "<< h_MET2[8][3]->Integral()<<" & "<< h_MET2[8][4]->Integral()<<" & "<< h_MET2[8][5]->Integral()<<" \\  "<<endl;
+       cout<<" $\\gamma$/jet ratio "<<" & "<< h_MET2[9][0]->Integral()<<" & "<< h_MET2[9][1]->Integral()<<" & "<< h_MET2[9][2]->Integral()<<" & "<< h_MET2[9][3]->Integral()<<" & "<< h_MET2[9][4]->Integral()<<" & "<< h_MET2[9][5]->Integral()<<" \\  "<<endl;
+       cout<<" dphi(2 lead jets, MET) $\\ge$ 0.3  "<<" & "<< h_MET2[10][0]->Integral()<<" & "<< h_MET2[10][1]->Integral()<<" & "<< h_MET2[10][2]->Integral()<<" & "<< h_MET2[10][3]->Integral()<<" & "<< h_MET2[10][4]->Integral()<<" & "<< h_MET2[10][5]->Integral()<<" \\  "<<endl;
+       cout<<" After EW selections  "<<" & "<< h_MET2[12][0]->Integral()<<" & "<< h_MET2[12][1]->Integral()<<" & "<< h_MET2[12][2]->Integral()<<" & "<< h_MET2[12][3]->Integral()<<" & "<< h_MET2[12][4]->Integral()<<" & "<< h_MET2[12][5]->Integral()<<" \\  "<<endl;
+
+  
+      cout<<"======= Cutflows for signals =========="<<endl;
+
+      TString varName2_[11]={varName_nocut,varName_genpho,/*varName_phopt,varName_MET200,varName_nj2,*/varName_ST300,varName_aftertrg,varName_nolep,varName_noisotrack,varName_ISR,varName_phojet,varName_dphi,varName_SP, varName_EW};
+      TString Name_[11]={"No cut","No cut","p_{T}^{#gamma}>100, p_{T}^{miss}>300, N_{j}>1","Trigger efficiency","0 Lepton","0 iso tracks","ISR reweights","p_{T}^{jet}/p_{T}^{#gamma} cut","min. #Delta #phi(jets,MET)>0.3","SP","EW"};
+
+      cout<<"Total no of hist : "<<sizeof(varName2_)/sizeof(varName2_[0])<<endl;
+      nhist=sizeof(varName2_)/sizeof(varName2_[0]);
+      for(int j=nfiles-4;j<nfiles;j++)
+	{
+	  TLegend *legend = new TLegend(0.69,0.55,0.9,0.9);
+	  legend->SetNColumns(1);
+	  legend->SetBorderSize(1);
+	  c1[j] = new TCanvas(fname_[j],fname_[j],1400,800);
+	  c1[j]->SetLogy();
+	  
+	  for(int i=0;i<nhist;i++)
+	    {
+	      cout<<" Name : "<<varName2_[i]<<endl;
+	      h_MET[i]=(TH1D*)f[j]->Get(varName2_[i]);
+	      if(i==0) continue;
+	      h_MET[i]->Rebin(rebin);
+	      h_MET[i]->SetLineColor(i-1);
+	      h_MET[i]->GetYaxis()->SetRangeUser(0.001,1000);
+	      if(i==1) h_MET[i]->Draw("hist");
+	      else h_MET[i]->Draw("hist sames");
+	      if(i==1) h_MET[i]->SetLineColor(kBlack);
+              if(i==2) h_MET[i]->SetLineColor(kMagenta-1);
+	      if(i==nhist-1)
+		{
+		  h_MET[i]->SetLineColor(kRed);
+		  h_MET[i]->SetLineWidth(2);	    
+		}
+	      TString tmp=varName + "_Nocut";
+	      /*
+              if(i==1){tmp=varName + "_nocut"; legend->AddEntry(h_MET[i],tmp,"lp");}
+              else if(i==2){tmp=varName + "_baseline"; legend->AddEntry(h_MET[i],tmp,"lp");}
+              else  legend->AddEntry(h_MET[i],varName2_[i],"lp");
+	      */	      
+	      legend->AddEntry(h_MET[i],Name_[i],"lp");
+
+	    }
+	  legend->Draw();
+	  TString pdf,png;
+	  pdf=path+"/pdf/"+varName+"/"+name[j]+".pdf";
+	  png=path+"/pdf/"+varName+"/"+name[j]+".png";
+	  c1[j]->SaveAs(pdf);
+	  c1[j]->SaveAs(png);
+	}
+      for(int i=0;i<nhist;i++)
+	{
+	  for(int j=nfiles-4;j<nfiles;j++)
+	    {
+	      h_MET2[i][j]=(TH1D*)f[j]->Get(varName2_[i]);
+	    }
+	}
+
+      
+      cout<<" No cut "<<" & "<< h_MET2[0][6]->Integral()<<" & "<< h_MET2[0][7]->Integral()<<" & "<<h_MET2[0][8]->Integral()<<" & "<< h_MET2[0][9]->Integral()<<" \\  "<<endl;
+
+      /*
+      cout<<" $p_{T}^{gamma}$ $>$ 100 GeV "<<" & "<< h_MET2[1][6]->Integral()<<" & "<< h_MET2[1][7]->Integral()<<" & "<<h_MET2[1][8]->Integral()<<" & "<< h_MET2[1][9]->Integral()<<" \\  "<<endl;
+      cout<<" $p_{T}^{miss}$ $>$ 300 GeV "<<" & "<< h_MET2[2][6]->Integral()<<" & "<< h_MET2[2][7]->Integral()<<" & "<<h_MET2[2][8]->Integral()<<" & "<< h_MET2[2][9]->Integral()<<" \\  "<<endl;
+      cout<<" $N_{jets}>2$ "<<" & "<< h_MET2[3][6]->Integral()<<" & "<< h_MET2[3][7]->Integral()<<" & "<<h_MET2[3][8]->Integral()<<" & "<< h_MET2[3][9]->Integral()<<" \\  "<<endl;
+      cout<<" ST $>$ 300 GeV "<<" & "<< h_MET2[4][6]->Integral()<<" & "<< h_MET2[4][7]->Integral()<<" & "<<h_MET2[4][8]->Integral()<<" & "<< h_MET2[4][9]->Integral()<<" \\  "<<endl;
+      */
+      cout<<" After some baseline "<<" & "<< h_MET2[2][6]->Integral()<<" & "<< h_MET2[2][7]->Integral()<<" & "<<h_MET2[2][8]->Integral()<<" & "<< h_MET2[2][9]->Integral()<<" \\  "<<endl;
+      cout<<" After Trigger eff."<<" & "<< h_MET2[3][6]->Integral()<<" & "<< h_MET2[3][7]->Integral()<<" & "<<h_MET2[3][8]->Integral()<<" & "<< h_MET2[3][9]->Integral()<<" \\  "<<endl;
+      cout<<" Lepton veto "<<" & "<< h_MET2[4][6]->Integral()<<" & "<< h_MET2[4][7]->Integral()<<" & "<<h_MET2[4][8]->Integral()<<" & "<< h_MET2[4][9]->Integral()<<" \\  "<<endl;
+           
+      cout<<" Iso e/$\\mu$/$\\pi$ track veto "<<" & "<< h_MET2[5][6]->Integral()<<" & "<< h_MET2[5][7]->Integral()<<" & "<<h_MET2[5][8]->Integral()<<" & "<< h_MET2[5][9]->Integral()<<" \\  "<<endl;
+      cout<<" ISR reweighting for TTJets "<<" & "<< h_MET2[6][6]->Integral()<<" & "<< h_MET2[6][7]->Integral()<<" & "<<h_MET2[6][8]->Integral()<<" & "<< h_MET2[6][9]->Integral()<<" \\  "<<endl;
+      cout<<" $\\gamma$/jet ratio "<<" & "<< h_MET2[7][6]->Integral()<<" & "<< h_MET2[7][7]->Integral()<<" & "<<h_MET2[7][8]->Integral()<<" & "<< h_MET2[7][9]->Integral()<<" \\  "<<endl;
+      cout<<" dphi(2 lead jets, MET) $\\ge$ 0.3 "<<" & "<< h_MET2[8][6]->Integral()<<" & "<< h_MET2[8][7]->Integral()<<" & "<<h_MET2[8][8]->Integral()<<" & "<< h_MET2[8][9]->Integral()<<" \\  "<<endl;
+      cout<<" After EW selections : "<<" & "<< h_MET2[10][6]->Integral()<<" & "<< h_MET2[10][7]->Integral()<<" & "<<h_MET2[10][8]->Integral()<<" & "<< h_MET2[10][9]->Integral()<<" \\  "<<endl;
+      /*
+      cout<<" After SP selections : "<<" & "<< h_MET2[9][6]->Integral()<<" & "<< h_MET2[9][7]->Integral()<<" & "<<h_MET2[9][8]->Integral()<<" & "<< h_MET2[9][9]->Integral()<<" \\  "<<endl;
+      cout<<" After EW selections : "<<" & "<< h_MET2[10][6]->Integral()<<" & "<< h_MET2[10][7]->Integral()<<" & "<<h_MET2[10][8]->Integral()<<" & "<< h_MET2[10][9]->Integral()<<" \\  "<<endl;
+      */
+    }
+}
